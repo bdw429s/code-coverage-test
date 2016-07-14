@@ -79,7 +79,7 @@ here
 
 <!--- script-based component --->
 <cfset scripty = new scripty()>
-<cfset scripty.iGetCalled()>)>
+<cfset scripty.iGetCalled()>
 
 <!--- generage coverage --->
 <cfinclude template="generateCoverage.cfm">
