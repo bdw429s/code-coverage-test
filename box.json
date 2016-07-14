@@ -1,0 +1,8 @@
+{
+    "dependencies":{
+        "cfperformanceexplorer":"github:intergral/cfperformanceexplorer"
+    },
+    "installPaths":{
+        "cfperformanceexplorer":"cfperformanceexplorer"
+    }
+}
