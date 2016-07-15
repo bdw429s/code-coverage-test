@@ -1,6 +1,6 @@
 <cfscript>
 	fragentClass = createObject( 'java', 'com.intergral.fusionreactor.agent.Agent' );
-	pathToCapture = expandPath( '/' );
+	pathToCapture = expandPath( '/root' );
 	fileList = directoryList( pathToCapture, true, "path", "*.cf*");
 	savecontent variable="local.coverageXML" {
 		writeOutput( '<coverage version="1">

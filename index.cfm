@@ -74,15 +74,15 @@ here
 </cfscript>
 
 <!--- tag-based component --->
-<cfset taggy = new taggy()>
+<cfset taggy = new root.taggy()>
 <cfset taggy.iGetCalled()>
 
 <!--- script-based component --->
-<cfset scripty = new scripty()>
+<cfset scripty = new root.scripty()>
 <cfset scripty.iGetCalled()>
 
 <cfset wirebox = new wirebox.system.ioc.injector()>
-<cfset scripty = wirebox.getInstance( 'scripty' )>
+<cfset scripty = wirebox.getInstance( 'root.scripty' )>
 
 <!--- generage coverage --->
 <cfinclude template="generateCoverage.cfm">
