@@ -1,8 +1,10 @@
 {
     "dependencies":{
-        "cfperformanceexplorer":"github:intergral/cfperformanceexplorer"
+        "cfperformanceexplorer":"github:intergral/cfperformanceexplorer",
+        "wirebox":"^2.0.0+00002"
     },
     "installPaths":{
-        "cfperformanceexplorer":"cfperformanceexplorer"
+        "cfperformanceexplorer":"cfperformanceexplorer",
+        "wirebox":"wirebox"
     }
 }

@@ -81,6 +81,9 @@ here
 <cfset scripty = new scripty()>
 <cfset scripty.iGetCalled()>
 
+<cfset wirebox = new wirebox.system.ioc.injector()>
+<cfset scripty = wirebox.getInstance( 'scripty' )>
+
 <!--- generage coverage --->
 <cfinclude template="generateCoverage.cfm">
 
