@@ -1,9 +1,9 @@
 <coverage version="1">
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;cfperformanceexplorer&#x5c;example&#x5c;manage.cflinetracker.cfm">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;cfperformanceexplorer&#x5c;example&#x5c;manage.cflinetracker.cfm">
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;cfperformanceexplorer&#x5c;example&#x5c;read.cflinetracker.cfm">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;cfperformanceexplorer&#x5c;example&#x5c;read.cflinetracker.cfm">
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;cfperformanceexplorer&#x5c;index.cfm">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;cfperformanceexplorer&#x5c;index.cfm">
 		<lineToCover lineNumber="1" covered="false" />
 		<lineToCover lineNumber="18" covered="true" />
 		<lineToCover lineNumber="25" covered="true" />
@@ -59,11 +59,11 @@
 		<lineToCover lineNumber="209" covered="true" />
 		<lineToCover lineNumber="210" covered="true" />
 		<lineToCover lineNumber="212" covered="true" />
-		<lineToCover lineNumber="213" covered="false" />
-		<lineToCover lineNumber="214" covered="false" />
-		<lineToCover lineNumber="215" covered="false" />
-		<lineToCover lineNumber="216" covered="false" />
-		<lineToCover lineNumber="218" covered="false" />
+		<lineToCover lineNumber="213" covered="true" />
+		<lineToCover lineNumber="214" covered="true" />
+		<lineToCover lineNumber="215" covered="true" />
+		<lineToCover lineNumber="216" covered="true" />
+		<lineToCover lineNumber="218" covered="true" />
 		<lineToCover lineNumber="222" covered="true" />
 		<lineToCover lineNumber="223" covered="true" />
 		<lineToCover lineNumber="224" covered="true" />
@@ -92,11 +92,11 @@
 		<lineToCover lineNumber="252" covered="false" />
 		<lineToCover lineNumber="253" covered="false" />
 		<lineToCover lineNumber="254" covered="true" />
-		<lineToCover lineNumber="255" covered="false" />
-		<lineToCover lineNumber="256" covered="false" />
+		<lineToCover lineNumber="255" covered="true" />
+		<lineToCover lineNumber="256" covered="true" />
 		<lineToCover lineNumber="257" covered="true" />
-		<lineToCover lineNumber="258" covered="false" />
-		<lineToCover lineNumber="259" covered="false" />
+		<lineToCover lineNumber="258" covered="true" />
+		<lineToCover lineNumber="259" covered="true" />
 		<lineToCover lineNumber="260" covered="true" />
 		<lineToCover lineNumber="261" covered="true" />
 		<lineToCover lineNumber="262" covered="true" />
@@ -143,18 +143,18 @@
 		<lineToCover lineNumber="323" covered="false" />
 		<lineToCover lineNumber="324" covered="true" />
 		<lineToCover lineNumber="325" covered="true" />
-		<lineToCover lineNumber="326" covered="false" />
-		<lineToCover lineNumber="327" covered="false" />
+		<lineToCover lineNumber="326" covered="true" />
+		<lineToCover lineNumber="327" covered="true" />
 		<lineToCover lineNumber="328" covered="true" />
 		<lineToCover lineNumber="329" covered="true" />
 		<lineToCover lineNumber="330" covered="true" />
-		<lineToCover lineNumber="331" covered="false" />
-		<lineToCover lineNumber="332" covered="false" />
+		<lineToCover lineNumber="331" covered="true" />
+		<lineToCover lineNumber="332" covered="true" />
 		<lineToCover lineNumber="333" covered="true" />
 		<lineToCover lineNumber="334" covered="true" />
 		<lineToCover lineNumber="335" covered="true" />
-		<lineToCover lineNumber="336" covered="false" />
-		<lineToCover lineNumber="337" covered="false" />
+		<lineToCover lineNumber="336" covered="true" />
+		<lineToCover lineNumber="337" covered="true" />
 		<lineToCover lineNumber="338" covered="true" />
 		<lineToCover lineNumber="339" covered="true" />
 		<lineToCover lineNumber="340" covered="true" />
@@ -191,10 +191,10 @@
 		<lineToCover lineNumber="383" covered="true" />
 		<lineToCover lineNumber="384" covered="true" />
 		<lineToCover lineNumber="385" covered="true" />
-		<lineToCover lineNumber="392" covered="false" />
-		<lineToCover lineNumber="395" covered="false" />
-		<lineToCover lineNumber="396" covered="false" />
-		<lineToCover lineNumber="397" covered="false" />
+		<lineToCover lineNumber="392" covered="true" />
+		<lineToCover lineNumber="395" covered="true" />
+		<lineToCover lineNumber="396" covered="true" />
+		<lineToCover lineNumber="397" covered="true" />
 		<lineToCover lineNumber="403" covered="false" />
 		<lineToCover lineNumber="406" covered="false" />
 		<lineToCover lineNumber="407" covered="false" />
@@ -225,7 +225,7 @@
 		<lineToCover lineNumber="520" covered="true" />
 		<lineToCover lineNumber="522" covered="true" />
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;cfperformanceexplorer&#x5c;_functions.cfm">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;cfperformanceexplorer&#x5c;_functions.cfm">
 		<lineToCover lineNumber="1" covered="true" />
 		<lineToCover lineNumber="18" covered="true" />
 		<lineToCover lineNumber="23" covered="true" />
@@ -354,7 +354,7 @@
 		<lineToCover lineNumber="304" covered="false" />
 		<lineToCover lineNumber="305" covered="false" />
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;generateCoverage.cfm">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;generateCoverage.cfm">
 		<lineToCover lineNumber="1" covered="true" />
 		<lineToCover lineNumber="2" covered="true" />
 		<lineToCover lineNumber="3" covered="true" />
@@ -389,13 +389,8 @@
 		<lineToCover lineNumber="42" covered="false" />
 		<lineToCover lineNumber="44" covered="false" />
 		<lineToCover lineNumber="45" covered="false" />
-		<lineToCover lineNumber="46" covered="false" />
-		<lineToCover lineNumber="47" covered="false" />
-		<lineToCover lineNumber="48" covered="false" />
-		<lineToCover lineNumber="49" covered="false" />
-		<lineToCover lineNumber="50" covered="false" />
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;index.cfm">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;index.cfm">
 		<lineToCover lineNumber="1" covered="false" />
 		<lineToCover lineNumber="2" covered="true" />
 		<lineToCover lineNumber="31" covered="true" />
@@ -441,9 +436,11 @@
 		<lineToCover lineNumber="82" covered="true" />
 		<lineToCover lineNumber="84" covered="true" />
 		<lineToCover lineNumber="85" covered="true" />
-		<lineToCover lineNumber="91" covered="true" />
+		<lineToCover lineNumber="87" covered="true" />
+		<lineToCover lineNumber="88" covered="true" />
+		<lineToCover lineNumber="94" covered="true" />
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;scripty.cfc">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;scripty.cfc">
 		<lineToCover lineNumber="5" covered="true" />
 		<lineToCover lineNumber="11" covered="true" />
 		<lineToCover lineNumber="17" covered="true" />
@@ -468,7 +465,7 @@
 		<lineToCover lineNumber="49" covered="true" />
 		<lineToCover lineNumber="51" covered="true" />
 	</file>
-	<file path="C&#x3a;&#x5c;sandbox&#x5c;coverage&#x5c;taggy.cfc">
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;taggy.cfc">
 		<lineToCover lineNumber="5" covered="true" />
 		<lineToCover lineNumber="7" covered="true" />
 		<lineToCover lineNumber="11" covered="true" />
@@ -497,6 +494,1274 @@
 		<lineToCover lineNumber="48" covered="true" />
 		<lineToCover lineNumber="49" covered="true" />
 		<lineToCover lineNumber="51" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;aspects&#x5c;CFTransaction.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;aspects&#x5c;MethodLogger.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;Matcher.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;MethodInterceptor.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;MethodInvocation.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;Mixer.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;aop&#x5c;MixerUtil.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;collections&#x5c;ScopeStorage.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="33" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="41" covered="true" />
+		<lineToCover lineNumber="43" covered="true" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="59" covered="true" />
+		<lineToCover lineNumber="65" covered="true" />
+		<lineToCover lineNumber="67" covered="true" />
+		<lineToCover lineNumber="89" covered="true" />
+		<lineToCover lineNumber="91" covered="true" />
+		<lineToCover lineNumber="93" covered="true" />
+		<lineToCover lineNumber="94" covered="true" />
+		<lineToCover lineNumber="96" covered="true" />
+		<lineToCover lineNumber="97" covered="true" />
+		<lineToCover lineNumber="99" covered="true" />
+		<lineToCover lineNumber="100" covered="true" />
+		<lineToCover lineNumber="102" covered="true" />
+		<lineToCover lineNumber="103" covered="true" />
+		<lineToCover lineNumber="105" covered="true" />
+		<lineToCover lineNumber="106" covered="true" />
+		<lineToCover lineNumber="108" covered="true" />
+		<lineToCover lineNumber="110" covered="true" />
+		<lineToCover lineNumber="117" covered="true" />
+		<lineToCover lineNumber="119" covered="true" />
+		<lineToCover lineNumber="121" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;conversion&#x5c;DataMarshaller.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;conversion&#x5c;ObjectMarshaller.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;conversion&#x5c;XMLConverter.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;dynamic&#x5c;BeanPopulator.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;dynamic&#x5c;HTMLHelper.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;dynamic&#x5c;MixerUtil.cfc">
+		<lineToCover lineNumber="11" covered="true" />
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="36" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="59" covered="true" />
+		<lineToCover lineNumber="72" covered="true" />
+		<lineToCover lineNumber="74" covered="true" />
+		<lineToCover lineNumber="102" covered="true" />
+		<lineToCover lineNumber="104" covered="true" />
+		<lineToCover lineNumber="118" covered="true" />
+		<lineToCover lineNumber="120" covered="true" />
+		<lineToCover lineNumber="124" covered="true" />
+		<lineToCover lineNumber="126" covered="true" />
+		<lineToCover lineNumber="134" covered="true" />
+		<lineToCover lineNumber="136" covered="true" />
+		<lineToCover lineNumber="147" covered="true" />
+		<lineToCover lineNumber="149" covered="true" />
+		<lineToCover lineNumber="164" covered="true" />
+		<lineToCover lineNumber="166" covered="true" />
+		<lineToCover lineNumber="174" covered="true" />
+		<lineToCover lineNumber="176" covered="true" />
+		<lineToCover lineNumber="183" covered="true" />
+		<lineToCover lineNumber="185" covered="true" />
+		<lineToCover lineNumber="192" covered="true" />
+		<lineToCover lineNumber="194" covered="true" />
+		<lineToCover lineNumber="225" covered="true" />
+		<lineToCover lineNumber="227" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;events&#x5c;EventPool.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;events&#x5c;EventPoolManager.cfc">
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="39" covered="true" />
+		<lineToCover lineNumber="55" covered="true" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="96" covered="true" />
+		<lineToCover lineNumber="98" covered="true" />
+		<lineToCover lineNumber="117" covered="true" />
+		<lineToCover lineNumber="119" covered="true" />
+		<lineToCover lineNumber="141" covered="true" />
+		<lineToCover lineNumber="143" covered="true" />
+		<lineToCover lineNumber="145" covered="true" />
+		<lineToCover lineNumber="147" covered="true" />
+		<lineToCover lineNumber="149" covered="true" />
+		<lineToCover lineNumber="151" covered="true" />
+		<lineToCover lineNumber="153" covered="true" />
+		<lineToCover lineNumber="155" covered="true" />
+		<lineToCover lineNumber="166" covered="true" />
+		<lineToCover lineNumber="168" covered="true" />
+		<lineToCover lineNumber="188" covered="true" />
+		<lineToCover lineNumber="190" covered="true" />
+		<lineToCover lineNumber="228" covered="true" />
+		<lineToCover lineNumber="230" covered="true" />
+		<lineToCover lineNumber="258" covered="true" />
+		<lineToCover lineNumber="260" covered="true" />
+		<lineToCover lineNumber="262" covered="true" />
+		<lineToCover lineNumber="264" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;util&#x5c;CFMappingHelper.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;util&#x5c;CFMLEngine.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;util&#x5c;FileUtils.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;util&#x5c;RailoMappingHelper.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;util&#x5c;RequestBuffer.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;core&#x5c;util&#x5c;Util.cfc">
+		<lineToCover lineNumber="11" covered="true" />
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="47" covered="true" />
+		<lineToCover lineNumber="49" covered="true" />
+		<lineToCover lineNumber="53" covered="true" />
+		<lineToCover lineNumber="55" covered="true" />
+		<lineToCover lineNumber="65" covered="true" />
+		<lineToCover lineNumber="67" covered="true" />
+		<lineToCover lineNumber="90" covered="true" />
+		<lineToCover lineNumber="92" covered="true" />
+		<lineToCover lineNumber="132" covered="true" />
+		<lineToCover lineNumber="134" covered="true" />
+		<lineToCover lineNumber="147" covered="true" />
+		<lineToCover lineNumber="149" covered="true" />
+		<lineToCover lineNumber="168" covered="true" />
+		<lineToCover lineNumber="170" covered="true" />
+		<lineToCover lineNumber="207" covered="true" />
+		<lineToCover lineNumber="209" covered="true" />
+		<lineToCover lineNumber="268" covered="true" />
+		<lineToCover lineNumber="270" covered="true" />
+		<lineToCover lineNumber="287" covered="true" />
+		<lineToCover lineNumber="289" covered="true" />
+		<lineToCover lineNumber="313" covered="true" />
+		<lineToCover lineNumber="315" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;Builder.cfc">
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="43" covered="true" />
+		<lineToCover lineNumber="45" covered="true" />
+		<lineToCover lineNumber="48" covered="true" />
+		<lineToCover lineNumber="50" covered="true" />
+		<lineToCover lineNumber="60" covered="true" />
+		<lineToCover lineNumber="62" covered="true" />
+		<lineToCover lineNumber="74" covered="true" />
+		<lineToCover lineNumber="76" covered="true" />
+		<lineToCover lineNumber="90" covered="true" />
+		<lineToCover lineNumber="92" covered="true" />
+		<lineToCover lineNumber="139" covered="true" />
+		<lineToCover lineNumber="141" covered="true" />
+		<lineToCover lineNumber="174" covered="true" />
+		<lineToCover lineNumber="176" covered="true" />
+		<lineToCover lineNumber="208" covered="true" />
+		<lineToCover lineNumber="210" covered="true" />
+		<lineToCover lineNumber="261" covered="true" />
+		<lineToCover lineNumber="263" covered="true" />
+		<lineToCover lineNumber="284" covered="true" />
+		<lineToCover lineNumber="286" covered="true" />
+		<lineToCover lineNumber="294" covered="true" />
+		<lineToCover lineNumber="296" covered="true" />
+		<lineToCover lineNumber="311" covered="true" />
+		<lineToCover lineNumber="313" covered="true" />
+		<lineToCover lineNumber="384" covered="true" />
+		<lineToCover lineNumber="386" covered="true" />
+		<lineToCover lineNumber="397" covered="true" />
+		<lineToCover lineNumber="399" covered="true" />
+		<lineToCover lineNumber="440" covered="true" />
+		<lineToCover lineNumber="442" covered="true" />
+		<lineToCover lineNumber="482" covered="true" />
+		<lineToCover lineNumber="484" covered="true" />
+		<lineToCover lineNumber="525" covered="true" />
+		<lineToCover lineNumber="527" covered="true" />
+		<lineToCover lineNumber="538" covered="true" />
+		<lineToCover lineNumber="540" covered="true" />
+		<lineToCover lineNumber="578" covered="true" />
+		<lineToCover lineNumber="580" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;config&#x5c;Binder.cfc">
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="30" covered="true" />
+		<lineToCover lineNumber="32" covered="true" />
+		<lineToCover lineNumber="33" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="36" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+		<lineToCover lineNumber="39" covered="true" />
+		<lineToCover lineNumber="40" covered="true" />
+		<lineToCover lineNumber="41" covered="true" />
+		<lineToCover lineNumber="42" covered="true" />
+		<lineToCover lineNumber="44" covered="true" />
+		<lineToCover lineNumber="46" covered="true" />
+		<lineToCover lineNumber="47" covered="true" />
+		<lineToCover lineNumber="49" covered="true" />
+		<lineToCover lineNumber="83" covered="true" />
+		<lineToCover lineNumber="85" covered="true" />
+		<lineToCover lineNumber="88" covered="true" />
+		<lineToCover lineNumber="90" covered="true" />
+		<lineToCover lineNumber="93" covered="true" />
+		<lineToCover lineNumber="95" covered="true" />
+		<lineToCover lineNumber="98" covered="true" />
+		<lineToCover lineNumber="100" covered="true" />
+		<lineToCover lineNumber="103" covered="true" />
+		<lineToCover lineNumber="105" covered="true" />
+		<lineToCover lineNumber="135" covered="true" />
+		<lineToCover lineNumber="137" covered="true" />
+		<lineToCover lineNumber="142" covered="true" />
+		<lineToCover lineNumber="144" covered="true" />
+		<lineToCover lineNumber="149" covered="true" />
+		<lineToCover lineNumber="151" covered="true" />
+		<lineToCover lineNumber="166" covered="true" />
+		<lineToCover lineNumber="168" covered="true" />
+		<lineToCover lineNumber="173" covered="true" />
+		<lineToCover lineNumber="175" covered="true" />
+		<lineToCover lineNumber="179" covered="true" />
+		<lineToCover lineNumber="181" covered="true" />
+		<lineToCover lineNumber="186" covered="true" />
+		<lineToCover lineNumber="188" covered="true" />
+		<lineToCover lineNumber="193" covered="true" />
+		<lineToCover lineNumber="195" covered="true" />
+		<lineToCover lineNumber="200" covered="true" />
+		<lineToCover lineNumber="202" covered="true" />
+		<lineToCover lineNumber="213" covered="true" />
+		<lineToCover lineNumber="215" covered="true" />
+		<lineToCover lineNumber="222" covered="true" />
+		<lineToCover lineNumber="224" covered="true" />
+		<lineToCover lineNumber="230" covered="true" />
+		<lineToCover lineNumber="232" covered="true" />
+		<lineToCover lineNumber="236" covered="true" />
+		<lineToCover lineNumber="238" covered="true" />
+		<lineToCover lineNumber="258" covered="true" />
+		<lineToCover lineNumber="260" covered="true" />
+		<lineToCover lineNumber="313" covered="true" />
+		<lineToCover lineNumber="315" covered="true" />
+		<lineToCover lineNumber="355" covered="true" />
+		<lineToCover lineNumber="357" covered="true" />
+		<lineToCover lineNumber="364" covered="true" />
+		<lineToCover lineNumber="366" covered="true" />
+		<lineToCover lineNumber="374" covered="true" />
+		<lineToCover lineNumber="376" covered="true" />
+		<lineToCover lineNumber="384" covered="true" />
+		<lineToCover lineNumber="386" covered="true" />
+		<lineToCover lineNumber="397" covered="true" />
+		<lineToCover lineNumber="399" covered="true" />
+		<lineToCover lineNumber="406" covered="true" />
+		<lineToCover lineNumber="408" covered="true" />
+		<lineToCover lineNumber="415" covered="true" />
+		<lineToCover lineNumber="417" covered="true" />
+		<lineToCover lineNumber="424" covered="true" />
+		<lineToCover lineNumber="426" covered="true" />
+		<lineToCover lineNumber="433" covered="true" />
+		<lineToCover lineNumber="435" covered="true" />
+		<lineToCover lineNumber="442" covered="true" />
+		<lineToCover lineNumber="444" covered="true" />
+		<lineToCover lineNumber="451" covered="true" />
+		<lineToCover lineNumber="453" covered="true" />
+		<lineToCover lineNumber="460" covered="true" />
+		<lineToCover lineNumber="462" covered="true" />
+		<lineToCover lineNumber="471" covered="true" />
+		<lineToCover lineNumber="473" covered="true" />
+		<lineToCover lineNumber="479" covered="true" />
+		<lineToCover lineNumber="481" covered="true" />
+		<lineToCover lineNumber="488" covered="true" />
+		<lineToCover lineNumber="490" covered="true" />
+		<lineToCover lineNumber="496" covered="true" />
+		<lineToCover lineNumber="498" covered="true" />
+		<lineToCover lineNumber="504" covered="true" />
+		<lineToCover lineNumber="506" covered="true" />
+		<lineToCover lineNumber="518" covered="true" />
+		<lineToCover lineNumber="520" covered="true" />
+		<lineToCover lineNumber="532" covered="true" />
+		<lineToCover lineNumber="534" covered="true" />
+		<lineToCover lineNumber="546" covered="true" />
+		<lineToCover lineNumber="548" covered="true" />
+		<lineToCover lineNumber="561" covered="true" />
+		<lineToCover lineNumber="563" covered="true" />
+		<lineToCover lineNumber="573" covered="true" />
+		<lineToCover lineNumber="575" covered="true" />
+		<lineToCover lineNumber="583" covered="true" />
+		<lineToCover lineNumber="585" covered="true" />
+		<lineToCover lineNumber="598" covered="true" />
+		<lineToCover lineNumber="600" covered="true" />
+		<lineToCover lineNumber="605" covered="true" />
+		<lineToCover lineNumber="607" covered="true" />
+		<lineToCover lineNumber="613" covered="true" />
+		<lineToCover lineNumber="615" covered="true" />
+		<lineToCover lineNumber="621" covered="true" />
+		<lineToCover lineNumber="623" covered="true" />
+		<lineToCover lineNumber="630" covered="true" />
+		<lineToCover lineNumber="632" covered="true" />
+		<lineToCover lineNumber="640" covered="true" />
+		<lineToCover lineNumber="642" covered="true" />
+		<lineToCover lineNumber="647" covered="true" />
+		<lineToCover lineNumber="649" covered="true" />
+		<lineToCover lineNumber="660" covered="true" />
+		<lineToCover lineNumber="662" covered="true" />
+		<lineToCover lineNumber="671" covered="true" />
+		<lineToCover lineNumber="673" covered="true" />
+		<lineToCover lineNumber="676" covered="true" />
+		<lineToCover lineNumber="678" covered="true" />
+		<lineToCover lineNumber="683" covered="true" />
+		<lineToCover lineNumber="685" covered="true" />
+		<lineToCover lineNumber="705" covered="true" />
+		<lineToCover lineNumber="707" covered="true" />
+		<lineToCover lineNumber="721" covered="true" />
+		<lineToCover lineNumber="723" covered="true" />
+		<lineToCover lineNumber="733" covered="true" />
+		<lineToCover lineNumber="735" covered="true" />
+		<lineToCover lineNumber="738" covered="true" />
+		<lineToCover lineNumber="740" covered="true" />
+		<lineToCover lineNumber="762" covered="true" />
+		<lineToCover lineNumber="764" covered="true" />
+		<lineToCover lineNumber="772" covered="true" />
+		<lineToCover lineNumber="774" covered="true" />
+		<lineToCover lineNumber="777" covered="true" />
+		<lineToCover lineNumber="779" covered="true" />
+		<lineToCover lineNumber="787" covered="true" />
+		<lineToCover lineNumber="789" covered="true" />
+		<lineToCover lineNumber="792" covered="true" />
+		<lineToCover lineNumber="794" covered="true" />
+		<lineToCover lineNumber="801" covered="true" />
+		<lineToCover lineNumber="803" covered="true" />
+		<lineToCover lineNumber="806" covered="true" />
+		<lineToCover lineNumber="808" covered="true" />
+		<lineToCover lineNumber="885" covered="true" />
+		<lineToCover lineNumber="887" covered="true" />
+		<lineToCover lineNumber="890" covered="true" />
+		<lineToCover lineNumber="892" covered="true" />
+		<lineToCover lineNumber="895" covered="true" />
+		<lineToCover lineNumber="897" covered="true" />
+		<lineToCover lineNumber="900" covered="true" />
+		<lineToCover lineNumber="902" covered="true" />
+		<lineToCover lineNumber="922" covered="true" />
+		<lineToCover lineNumber="924" covered="true" />
+		<lineToCover lineNumber="941" covered="true" />
+		<lineToCover lineNumber="943" covered="true" />
+		<lineToCover lineNumber="946" covered="true" />
+		<lineToCover lineNumber="948" covered="true" />
+		<lineToCover lineNumber="963" covered="true" />
+		<lineToCover lineNumber="965" covered="true" />
+		<lineToCover lineNumber="970" covered="true" />
+		<lineToCover lineNumber="972" covered="true" />
+		<lineToCover lineNumber="985" covered="true" />
+		<lineToCover lineNumber="987" covered="true" />
+		<lineToCover lineNumber="990" covered="true" />
+		<lineToCover lineNumber="992" covered="true" />
+		<lineToCover lineNumber="994" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;config&#x5c;DefaultBinder.cfc">
+		<lineToCover lineNumber="11" covered="true" />
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="30" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="36" covered="true" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+		<lineToCover lineNumber="41" covered="true" />
+		<lineToCover lineNumber="43" covered="true" />
+		<lineToCover lineNumber="46" covered="true" />
+		<lineToCover lineNumber="48" covered="true" />
+		<lineToCover lineNumber="51" covered="true" />
+		<lineToCover lineNumber="54" covered="true" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="60" covered="true" />
+		<lineToCover lineNumber="63" covered="true" />
+		<lineToCover lineNumber="64" covered="true" />
+		<lineToCover lineNumber="65" covered="true" />
+		<lineToCover lineNumber="66" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;config&#x5c;LogBox.cfc">
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="32" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="36" covered="true" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;config&#x5c;Mapping.cfc">
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="85" covered="true" />
+		<lineToCover lineNumber="87" covered="true" />
+		<lineToCover lineNumber="90" covered="true" />
+		<lineToCover lineNumber="92" covered="true" />
+		<lineToCover lineNumber="167" covered="true" />
+		<lineToCover lineNumber="169" covered="true" />
+		<lineToCover lineNumber="172" covered="true" />
+		<lineToCover lineNumber="173" covered="true" />
+		<lineToCover lineNumber="177" covered="true" />
+		<lineToCover lineNumber="178" covered="true" />
+		<lineToCover lineNumber="180" covered="true" />
+		<lineToCover lineNumber="182" covered="true" />
+		<lineToCover lineNumber="185" covered="true" />
+		<lineToCover lineNumber="186" covered="true" />
+		<lineToCover lineNumber="190" covered="true" />
+		<lineToCover lineNumber="192" covered="true" />
+		<lineToCover lineNumber="195" covered="true" />
+		<lineToCover lineNumber="196" covered="true" />
+		<lineToCover lineNumber="200" covered="true" />
+		<lineToCover lineNumber="202" covered="true" />
+		<lineToCover lineNumber="205" covered="true" />
+		<lineToCover lineNumber="206" covered="true" />
+		<lineToCover lineNumber="210" covered="true" />
+		<lineToCover lineNumber="212" covered="true" />
+		<lineToCover lineNumber="215" covered="true" />
+		<lineToCover lineNumber="216" covered="true" />
+		<lineToCover lineNumber="220" covered="true" />
+		<lineToCover lineNumber="222" covered="true" />
+		<lineToCover lineNumber="225" covered="true" />
+		<lineToCover lineNumber="226" covered="true" />
+		<lineToCover lineNumber="230" covered="true" />
+		<lineToCover lineNumber="232" covered="true" />
+		<lineToCover lineNumber="235" covered="true" />
+		<lineToCover lineNumber="236" covered="true" />
+		<lineToCover lineNumber="240" covered="true" />
+		<lineToCover lineNumber="242" covered="true" />
+		<lineToCover lineNumber="245" covered="true" />
+		<lineToCover lineNumber="246" covered="true" />
+		<lineToCover lineNumber="250" covered="true" />
+		<lineToCover lineNumber="252" covered="true" />
+		<lineToCover lineNumber="255" covered="true" />
+		<lineToCover lineNumber="256" covered="true" />
+		<lineToCover lineNumber="260" covered="true" />
+		<lineToCover lineNumber="262" covered="true" />
+		<lineToCover lineNumber="265" covered="true" />
+		<lineToCover lineNumber="266" covered="true" />
+		<lineToCover lineNumber="270" covered="true" />
+		<lineToCover lineNumber="272" covered="true" />
+		<lineToCover lineNumber="275" covered="true" />
+		<lineToCover lineNumber="276" covered="true" />
+		<lineToCover lineNumber="280" covered="true" />
+		<lineToCover lineNumber="282" covered="true" />
+		<lineToCover lineNumber="285" covered="true" />
+		<lineToCover lineNumber="286" covered="true" />
+		<lineToCover lineNumber="290" covered="true" />
+		<lineToCover lineNumber="292" covered="true" />
+		<lineToCover lineNumber="295" covered="true" />
+		<lineToCover lineNumber="296" covered="true" />
+		<lineToCover lineNumber="300" covered="true" />
+		<lineToCover lineNumber="302" covered="true" />
+		<lineToCover lineNumber="305" covered="true" />
+		<lineToCover lineNumber="306" covered="true" />
+		<lineToCover lineNumber="311" covered="true" />
+		<lineToCover lineNumber="313" covered="true" />
+		<lineToCover lineNumber="316" covered="true" />
+		<lineToCover lineNumber="317" covered="true" />
+		<lineToCover lineNumber="321" covered="true" />
+		<lineToCover lineNumber="323" covered="true" />
+		<lineToCover lineNumber="326" covered="true" />
+		<lineToCover lineNumber="327" covered="true" />
+		<lineToCover lineNumber="331" covered="true" />
+		<lineToCover lineNumber="333" covered="true" />
+		<lineToCover lineNumber="336" covered="true" />
+		<lineToCover lineNumber="337" covered="true" />
+		<lineToCover lineNumber="339" covered="true" />
+		<lineToCover lineNumber="340" covered="true" />
+		<lineToCover lineNumber="344" covered="true" />
+		<lineToCover lineNumber="346" covered="true" />
+		<lineToCover lineNumber="356" covered="true" />
+		<lineToCover lineNumber="357" covered="true" />
+		<lineToCover lineNumber="359" covered="true" />
+		<lineToCover lineNumber="361" covered="true" />
+		<lineToCover lineNumber="364" covered="true" />
+		<lineToCover lineNumber="366" covered="true" />
+		<lineToCover lineNumber="389" covered="true" />
+		<lineToCover lineNumber="391" covered="true" />
+		<lineToCover lineNumber="412" covered="true" />
+		<lineToCover lineNumber="414" covered="true" />
+		<lineToCover lineNumber="417" covered="true" />
+		<lineToCover lineNumber="419" covered="true" />
+		<lineToCover lineNumber="422" covered="true" />
+		<lineToCover lineNumber="424" covered="true" />
+		<lineToCover lineNumber="445" covered="true" />
+		<lineToCover lineNumber="447" covered="true" />
+		<lineToCover lineNumber="450" covered="true" />
+		<lineToCover lineNumber="452" covered="true" />
+		<lineToCover lineNumber="480" covered="true" />
+		<lineToCover lineNumber="482" covered="true" />
+		<lineToCover lineNumber="485" covered="true" />
+		<lineToCover lineNumber="486" covered="true" />
+		<lineToCover lineNumber="490" covered="true" />
+		<lineToCover lineNumber="492" covered="true" />
+		<lineToCover lineNumber="495" covered="true" />
+		<lineToCover lineNumber="497" covered="true" />
+		<lineToCover lineNumber="501" covered="true" />
+		<lineToCover lineNumber="503" covered="true" />
+		<lineToCover lineNumber="506" covered="true" />
+		<lineToCover lineNumber="508" covered="true" />
+		<lineToCover lineNumber="513" covered="true" />
+		<lineToCover lineNumber="515" covered="true" />
+		<lineToCover lineNumber="518" covered="true" />
+		<lineToCover lineNumber="520" covered="true" />
+		<lineToCover lineNumber="525" covered="true" />
+		<lineToCover lineNumber="527" covered="true" />
+		<lineToCover lineNumber="530" covered="true" />
+		<lineToCover lineNumber="532" covered="true" />
+		<lineToCover lineNumber="538" covered="true" />
+		<lineToCover lineNumber="540" covered="true" />
+		<lineToCover lineNumber="714" covered="true" />
+		<lineToCover lineNumber="716" covered="true" />
+		<lineToCover lineNumber="781" covered="true" />
+		<lineToCover lineNumber="783" covered="true" />
+		<lineToCover lineNumber="907" covered="true" />
+		<lineToCover lineNumber="909" covered="true" />
+		<lineToCover lineNumber="912" covered="true" />
+		<lineToCover lineNumber="914" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;config&#x5c;Mixin.cfc">
+		<lineToCover lineNumber="1" covered="true" />
+		<lineToCover lineNumber="3" covered="true" />
+		<lineToCover lineNumber="4" covered="true" />
+		<lineToCover lineNumber="5" covered="true" />
+		<lineToCover lineNumber="7" covered="true" />
+		<lineToCover lineNumber="8" covered="true" />
+		<lineToCover lineNumber="9" covered="true" />
+		<lineToCover lineNumber="11" covered="true" />
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="13" covered="false" />
+		<lineToCover lineNumber="14" covered="false" />
+		<lineToCover lineNumber="15" covered="false" />
+		<lineToCover lineNumber="16" covered="false" />
+		<lineToCover lineNumber="17" covered="false" />
+		<lineToCover lineNumber="18" covered="false" />
+		<lineToCover lineNumber="19" covered="false" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="25" covered="false" />
+		<lineToCover lineNumber="27" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="29" covered="false" />
+		<lineToCover lineNumber="30" covered="true" />
+		<lineToCover lineNumber="32" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;dsl&#x5c;CacheBoxDSL.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;dsl&#x5c;ColdBoxDSL.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;dsl&#x5c;IDSLBuilder.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;dsl&#x5c;LogBoxDSL.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="false" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="27" covered="false" />
+		<lineToCover lineNumber="29" covered="false" />
+		<lineToCover lineNumber="30" covered="false" />
+		<lineToCover lineNumber="31" covered="false" />
+		<lineToCover lineNumber="32" covered="false" />
+		<lineToCover lineNumber="33" covered="false" />
+		<lineToCover lineNumber="34" covered="false" />
+		<lineToCover lineNumber="37" covered="false" />
+		<lineToCover lineNumber="39" covered="false" />
+		<lineToCover lineNumber="41" covered="false" />
+		<lineToCover lineNumber="42" covered="false" />
+		<lineToCover lineNumber="43" covered="false" />
+		<lineToCover lineNumber="44" covered="false" />
+		<lineToCover lineNumber="45" covered="false" />
+		<lineToCover lineNumber="46" covered="false" />
+		<lineToCover lineNumber="47" covered="false" />
+		<lineToCover lineNumber="50" covered="false" />
+		<lineToCover lineNumber="51" covered="false" />
+		<lineToCover lineNumber="52" covered="false" />
+		<lineToCover lineNumber="54" covered="false" />
+		<lineToCover lineNumber="56" covered="false" />
+		<lineToCover lineNumber="58" covered="false" />
+		<lineToCover lineNumber="59" covered="false" />
+		<lineToCover lineNumber="62" covered="false" />
+		<lineToCover lineNumber="64" covered="false" />
+		<lineToCover lineNumber="65" covered="false" />
+		<lineToCover lineNumber="67" covered="false" />
+		<lineToCover lineNumber="68" covered="false" />
+		<lineToCover lineNumber="69" covered="true" />
+		<lineToCover lineNumber="71" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;IInjector.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;Injector.cfc">
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="96" covered="true" />
+		<lineToCover lineNumber="98" covered="true" />
+		<lineToCover lineNumber="164" covered="true" />
+		<lineToCover lineNumber="166" covered="true" />
+		<lineToCover lineNumber="202" covered="true" />
+		<lineToCover lineNumber="204" covered="true" />
+		<lineToCover lineNumber="269" covered="true" />
+		<lineToCover lineNumber="271" covered="true" />
+		<lineToCover lineNumber="333" covered="true" />
+		<lineToCover lineNumber="335" covered="true" />
+		<lineToCover lineNumber="359" covered="true" />
+		<lineToCover lineNumber="361" covered="true" />
+		<lineToCover lineNumber="368" covered="true" />
+		<lineToCover lineNumber="370" covered="true" />
+		<lineToCover lineNumber="383" covered="true" />
+		<lineToCover lineNumber="385" covered="true" />
+		<lineToCover lineNumber="413" covered="true" />
+		<lineToCover lineNumber="415" covered="true" />
+		<lineToCover lineNumber="509" covered="true" />
+		<lineToCover lineNumber="511" covered="true" />
+		<lineToCover lineNumber="527" covered="true" />
+		<lineToCover lineNumber="529" covered="true" />
+		<lineToCover lineNumber="553" covered="true" />
+		<lineToCover lineNumber="555" covered="true" />
+		<lineToCover lineNumber="581" covered="true" />
+		<lineToCover lineNumber="583" covered="true" />
+		<lineToCover lineNumber="632" covered="true" />
+		<lineToCover lineNumber="634" covered="true" />
+		<lineToCover lineNumber="660" covered="true" />
+		<lineToCover lineNumber="662" covered="true" />
+		<lineToCover lineNumber="666" covered="true" />
+		<lineToCover lineNumber="668" covered="true" />
+		<lineToCover lineNumber="671" covered="true" />
+		<lineToCover lineNumber="673" covered="true" />
+		<lineToCover lineNumber="676" covered="true" />
+		<lineToCover lineNumber="678" covered="true" />
+		<lineToCover lineNumber="681" covered="true" />
+		<lineToCover lineNumber="683" covered="true" />
+		<lineToCover lineNumber="686" covered="true" />
+		<lineToCover lineNumber="688" covered="true" />
+		<lineToCover lineNumber="691" covered="true" />
+		<lineToCover lineNumber="693" covered="true" />
+		<lineToCover lineNumber="696" covered="true" />
+		<lineToCover lineNumber="698" covered="true" />
+		<lineToCover lineNumber="701" covered="true" />
+		<lineToCover lineNumber="703" covered="true" />
+		<lineToCover lineNumber="706" covered="true" />
+		<lineToCover lineNumber="708" covered="true" />
+		<lineToCover lineNumber="711" covered="true" />
+		<lineToCover lineNumber="713" covered="true" />
+		<lineToCover lineNumber="716" covered="true" />
+		<lineToCover lineNumber="718" covered="true" />
+		<lineToCover lineNumber="721" covered="true" />
+		<lineToCover lineNumber="723" covered="true" />
+		<lineToCover lineNumber="726" covered="true" />
+		<lineToCover lineNumber="728" covered="true" />
+		<lineToCover lineNumber="731" covered="true" />
+		<lineToCover lineNumber="733" covered="true" />
+		<lineToCover lineNumber="736" covered="true" />
+		<lineToCover lineNumber="738" covered="true" />
+		<lineToCover lineNumber="752" covered="true" />
+		<lineToCover lineNumber="754" covered="true" />
+		<lineToCover lineNumber="757" covered="true" />
+		<lineToCover lineNumber="759" covered="true" />
+		<lineToCover lineNumber="763" covered="true" />
+		<lineToCover lineNumber="765" covered="true" />
+		<lineToCover lineNumber="768" covered="true" />
+		<lineToCover lineNumber="770" covered="true" />
+		<lineToCover lineNumber="782" covered="true" />
+		<lineToCover lineNumber="784" covered="true" />
+		<lineToCover lineNumber="820" covered="true" />
+		<lineToCover lineNumber="822" covered="true" />
+		<lineToCover lineNumber="860" covered="true" />
+		<lineToCover lineNumber="862" covered="true" />
+		<lineToCover lineNumber="875" covered="true" />
+		<lineToCover lineNumber="877" covered="true" />
+		<lineToCover lineNumber="927" covered="true" />
+		<lineToCover lineNumber="929" covered="true" />
+		<lineToCover lineNumber="952" covered="true" />
+		<lineToCover lineNumber="954" covered="true" />
+		<lineToCover lineNumber="971" covered="true" />
+		<lineToCover lineNumber="973" covered="true" />
+		<lineToCover lineNumber="976" covered="true" />
+		<lineToCover lineNumber="978" covered="true" />
+		<lineToCover lineNumber="1006" covered="true" />
+		<lineToCover lineNumber="1008" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;IProvider.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;Provider.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;scopes&#x5c;CacheBox.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;scopes&#x5c;CFScopes.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="24" covered="false" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="27" covered="true" />
+		<lineToCover lineNumber="28" covered="false" />
+		<lineToCover lineNumber="30" covered="false" />
+		<lineToCover lineNumber="32" covered="false" />
+		<lineToCover lineNumber="33" covered="false" />
+		<lineToCover lineNumber="34" covered="false" />
+		<lineToCover lineNumber="35" covered="false" />
+		<lineToCover lineNumber="36" covered="false" />
+		<lineToCover lineNumber="38" covered="false" />
+		<lineToCover lineNumber="39" covered="false" />
+		<lineToCover lineNumber="40" covered="false" />
+		<lineToCover lineNumber="41" covered="false" />
+		<lineToCover lineNumber="42" covered="false" />
+		<lineToCover lineNumber="44" covered="false" />
+		<lineToCover lineNumber="46" covered="false" />
+		<lineToCover lineNumber="47" covered="false" />
+		<lineToCover lineNumber="50" covered="false" />
+		<lineToCover lineNumber="53" covered="false" />
+		<lineToCover lineNumber="54" covered="false" />
+		<lineToCover lineNumber="58" covered="false" />
+		<lineToCover lineNumber="61" covered="false" />
+		<lineToCover lineNumber="62" covered="false" />
+		<lineToCover lineNumber="66" covered="false" />
+		<lineToCover lineNumber="67" covered="false" />
+		<lineToCover lineNumber="70" covered="false" />
+		<lineToCover lineNumber="72" covered="false" />
+		<lineToCover lineNumber="73" covered="false" />
+		<lineToCover lineNumber="74" covered="false" />
+		<lineToCover lineNumber="76" covered="false" />
+		<lineToCover lineNumber="77" covered="false" />
+		<lineToCover lineNumber="78" covered="true" />
+		<lineToCover lineNumber="80" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;scopes&#x5c;IScope.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;scopes&#x5c;NoScope.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="false" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="29" covered="true" />
+		<lineToCover lineNumber="31" covered="true" />
+		<lineToCover lineNumber="33" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="36" covered="false" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="39" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;scopes&#x5c;RequestScope.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="false" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="27" covered="false" />
+		<lineToCover lineNumber="29" covered="false" />
+		<lineToCover lineNumber="30" covered="false" />
+		<lineToCover lineNumber="31" covered="false" />
+		<lineToCover lineNumber="32" covered="false" />
+		<lineToCover lineNumber="35" covered="false" />
+		<lineToCover lineNumber="37" covered="false" />
+		<lineToCover lineNumber="38" covered="false" />
+		<lineToCover lineNumber="41" covered="false" />
+		<lineToCover lineNumber="42" covered="false" />
+		<lineToCover lineNumber="44" covered="false" />
+		<lineToCover lineNumber="46" covered="false" />
+		<lineToCover lineNumber="47" covered="false" />
+		<lineToCover lineNumber="49" covered="false" />
+		<lineToCover lineNumber="52" covered="false" />
+		<lineToCover lineNumber="53" covered="false" />
+		<lineToCover lineNumber="54" covered="true" />
+		<lineToCover lineNumber="56" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;scopes&#x5c;Singleton.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="24" covered="false" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="27" covered="true" />
+		<lineToCover lineNumber="28" covered="false" />
+		<lineToCover lineNumber="30" covered="false" />
+		<lineToCover lineNumber="31" covered="false" />
+		<lineToCover lineNumber="32" covered="false" />
+		<lineToCover lineNumber="33" covered="false" />
+		<lineToCover lineNumber="35" covered="false" />
+		<lineToCover lineNumber="36" covered="false" />
+		<lineToCover lineNumber="37" covered="false" />
+		<lineToCover lineNumber="38" covered="false" />
+		<lineToCover lineNumber="39" covered="false" />
+		<lineToCover lineNumber="41" covered="false" />
+		<lineToCover lineNumber="44" covered="false" />
+		<lineToCover lineNumber="45" covered="false" />
+		<lineToCover lineNumber="49" covered="false" />
+		<lineToCover lineNumber="52" covered="false" />
+		<lineToCover lineNumber="53" covered="false" />
+		<lineToCover lineNumber="57" covered="false" />
+		<lineToCover lineNumber="60" covered="false" />
+		<lineToCover lineNumber="61" covered="false" />
+		<lineToCover lineNumber="65" covered="false" />
+		<lineToCover lineNumber="66" covered="false" />
+		<lineToCover lineNumber="70" covered="false" />
+		<lineToCover lineNumber="72" covered="false" />
+		<lineToCover lineNumber="73" covered="false" />
+		<lineToCover lineNumber="74" covered="false" />
+		<lineToCover lineNumber="76" covered="false" />
+		<lineToCover lineNumber="77" covered="false" />
+		<lineToCover lineNumber="78" covered="true" />
+		<lineToCover lineNumber="80" covered="true" />
+		<lineToCover lineNumber="81" covered="false" />
+		<lineToCover lineNumber="82" covered="false" />
+		<lineToCover lineNumber="83" covered="true" />
+		<lineToCover lineNumber="85" covered="true" />
+		<lineToCover lineNumber="86" covered="false" />
+		<lineToCover lineNumber="87" covered="false" />
+		<lineToCover lineNumber="88" covered="true" />
+		<lineToCover lineNumber="90" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;Scopes.cfc">
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="25" covered="false" />
+		<lineToCover lineNumber="26" covered="false" />
+		<lineToCover lineNumber="27" covered="false" />
+		<lineToCover lineNumber="28" covered="false" />
+		<lineToCover lineNumber="30" covered="false" />
+		<lineToCover lineNumber="31" covered="false" />
+		<lineToCover lineNumber="32" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="35" covered="false" />
+		<lineToCover lineNumber="36" covered="false" />
+		<lineToCover lineNumber="37" covered="false" />
+		<lineToCover lineNumber="38" covered="false" />
+		<lineToCover lineNumber="39" covered="false" />
+		<lineToCover lineNumber="41" covered="false" />
+		<lineToCover lineNumber="42" covered="false" />
+		<lineToCover lineNumber="43" covered="true" />
+		<lineToCover lineNumber="44" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;ioc&#x5c;Types.cfc">
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="25" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;AbstractAppender.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="27" covered="true" />
+		<lineToCover lineNumber="29" covered="true" />
+		<lineToCover lineNumber="31" covered="true" />
+		<lineToCover lineNumber="33" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="64" covered="true" />
+		<lineToCover lineNumber="66" covered="true" />
+		<lineToCover lineNumber="69" covered="true" />
+		<lineToCover lineNumber="71" covered="true" />
+		<lineToCover lineNumber="72" covered="true" />
+		<lineToCover lineNumber="74" covered="true" />
+		<lineToCover lineNumber="79" covered="true" />
+		<lineToCover lineNumber="80" covered="true" />
+		<lineToCover lineNumber="92" covered="true" />
+		<lineToCover lineNumber="94" covered="true" />
+		<lineToCover lineNumber="97" covered="true" />
+		<lineToCover lineNumber="98" covered="true" />
+		<lineToCover lineNumber="110" covered="true" />
+		<lineToCover lineNumber="112" covered="true" />
+		<lineToCover lineNumber="115" covered="true" />
+		<lineToCover lineNumber="116" covered="true" />
+		<lineToCover lineNumber="119" covered="true" />
+		<lineToCover lineNumber="121" covered="true" />
+		<lineToCover lineNumber="124" covered="true" />
+		<lineToCover lineNumber="126" covered="true" />
+		<lineToCover lineNumber="129" covered="true" />
+		<lineToCover lineNumber="131" covered="true" />
+		<lineToCover lineNumber="135" covered="true" />
+		<lineToCover lineNumber="137" covered="true" />
+		<lineToCover lineNumber="140" covered="true" />
+		<lineToCover lineNumber="142" covered="true" />
+		<lineToCover lineNumber="145" covered="true" />
+		<lineToCover lineNumber="147" covered="true" />
+		<lineToCover lineNumber="150" covered="true" />
+		<lineToCover lineNumber="151" covered="true" />
+		<lineToCover lineNumber="154" covered="true" />
+		<lineToCover lineNumber="156" covered="true" />
+		<lineToCover lineNumber="162" covered="true" />
+		<lineToCover lineNumber="164" covered="true" />
+		<lineToCover lineNumber="170" covered="true" />
+		<lineToCover lineNumber="172" covered="true" />
+		<lineToCover lineNumber="177" covered="true" />
+		<lineToCover lineNumber="179" covered="true" />
+		<lineToCover lineNumber="183" covered="true" />
+		<lineToCover lineNumber="185" covered="true" />
+		<lineToCover lineNumber="189" covered="true" />
+		<lineToCover lineNumber="191" covered="true" />
+		<lineToCover lineNumber="196" covered="true" />
+		<lineToCover lineNumber="198" covered="true" />
+		<lineToCover lineNumber="202" covered="true" />
+		<lineToCover lineNumber="204" covered="true" />
+		<lineToCover lineNumber="213" covered="true" />
+		<lineToCover lineNumber="215" covered="true" />
+		<lineToCover lineNumber="220" covered="true" />
+		<lineToCover lineNumber="222" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;CFAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;ConsoleAppender.cfc">
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="27" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="30" covered="true" />
+		<lineToCover lineNumber="32" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="35" covered="false" />
+		<lineToCover lineNumber="36" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+		<lineToCover lineNumber="39" covered="false" />
+		<lineToCover lineNumber="41" covered="false" />
+		<lineToCover lineNumber="42" covered="false" />
+		<lineToCover lineNumber="43" covered="false" />
+		<lineToCover lineNumber="44" covered="false" />
+		<lineToCover lineNumber="45" covered="false" />
+		<lineToCover lineNumber="47" covered="false" />
+		<lineToCover lineNumber="48" covered="false" />
+		<lineToCover lineNumber="51" covered="false" />
+		<lineToCover lineNumber="55" covered="false" />
+		<lineToCover lineNumber="56" covered="false" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="59" covered="true" />
+		<lineToCover lineNumber="62" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;DBAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;DummyAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;EmailAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;FileAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;RollingFileAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;ScopeAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;SocketAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;appenders&#x5c;TracerAppender.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;config&#x5c;LogBoxConfig.cfc">
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="55" covered="true" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="108" covered="true" />
+		<lineToCover lineNumber="110" covered="true" />
+		<lineToCover lineNumber="120" covered="true" />
+		<lineToCover lineNumber="122" covered="true" />
+		<lineToCover lineNumber="125" covered="true" />
+		<lineToCover lineNumber="127" covered="true" />
+		<lineToCover lineNumber="130" covered="true" />
+		<lineToCover lineNumber="132" covered="true" />
+		<lineToCover lineNumber="135" covered="true" />
+		<lineToCover lineNumber="137" covered="true" />
+		<lineToCover lineNumber="140" covered="true" />
+		<lineToCover lineNumber="142" covered="true" />
+		<lineToCover lineNumber="187" covered="true" />
+		<lineToCover lineNumber="189" covered="true" />
+		<lineToCover lineNumber="209" covered="true" />
+		<lineToCover lineNumber="211" covered="true" />
+		<lineToCover lineNumber="234" covered="true" />
+		<lineToCover lineNumber="236" covered="true" />
+		<lineToCover lineNumber="239" covered="true" />
+		<lineToCover lineNumber="241" covered="true" />
+		<lineToCover lineNumber="259" covered="true" />
+		<lineToCover lineNumber="261" covered="true" />
+		<lineToCover lineNumber="265" covered="true" />
+		<lineToCover lineNumber="267" covered="true" />
+		<lineToCover lineNumber="271" covered="true" />
+		<lineToCover lineNumber="273" covered="true" />
+		<lineToCover lineNumber="276" covered="true" />
+		<lineToCover lineNumber="278" covered="true" />
+		<lineToCover lineNumber="281" covered="true" />
+		<lineToCover lineNumber="283" covered="true" />
+		<lineToCover lineNumber="294" covered="true" />
+		<lineToCover lineNumber="296" covered="true" />
+		<lineToCover lineNumber="305" covered="true" />
+		<lineToCover lineNumber="307" covered="true" />
+		<lineToCover lineNumber="316" covered="true" />
+		<lineToCover lineNumber="318" covered="true" />
+		<lineToCover lineNumber="327" covered="true" />
+		<lineToCover lineNumber="329" covered="true" />
+		<lineToCover lineNumber="338" covered="true" />
+		<lineToCover lineNumber="340" covered="true" />
+		<lineToCover lineNumber="349" covered="true" />
+		<lineToCover lineNumber="351" covered="true" />
+		<lineToCover lineNumber="369" covered="true" />
+		<lineToCover lineNumber="371" covered="true" />
+		<lineToCover lineNumber="380" covered="true" />
+		<lineToCover lineNumber="382" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;config&#x5c;samples&#x5c;Sample.LogBox.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;Layout.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;LogBox.cfc">
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="19" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="30" covered="true" />
+		<lineToCover lineNumber="32" covered="true" />
+		<lineToCover lineNumber="34" covered="true" />
+		<lineToCover lineNumber="36" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+		<lineToCover lineNumber="40" covered="true" />
+		<lineToCover lineNumber="41" covered="true" />
+		<lineToCover lineNumber="43" covered="true" />
+		<lineToCover lineNumber="57" covered="true" />
+		<lineToCover lineNumber="59" covered="true" />
+		<lineToCover lineNumber="103" covered="true" />
+		<lineToCover lineNumber="105" covered="true" />
+		<lineToCover lineNumber="108" covered="true" />
+		<lineToCover lineNumber="110" covered="true" />
+		<lineToCover lineNumber="113" covered="true" />
+		<lineToCover lineNumber="115" covered="true" />
+		<lineToCover lineNumber="120" covered="true" />
+		<lineToCover lineNumber="122" covered="true" />
+		<lineToCover lineNumber="176" covered="true" />
+		<lineToCover lineNumber="178" covered="true" />
+		<lineToCover lineNumber="181" covered="true" />
+		<lineToCover lineNumber="183" covered="true" />
+		<lineToCover lineNumber="186" covered="true" />
+		<lineToCover lineNumber="188" covered="true" />
+		<lineToCover lineNumber="220" covered="true" />
+		<lineToCover lineNumber="222" covered="true" />
+		<lineToCover lineNumber="252" covered="true" />
+		<lineToCover lineNumber="254" covered="true" />
+		<lineToCover lineNumber="268" covered="true" />
+		<lineToCover lineNumber="270" covered="true" />
+		<lineToCover lineNumber="273" covered="true" />
+		<lineToCover lineNumber="275" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;LogEvent.cfc">
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;Logger.cfc">
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="18" covered="true" />
+		<lineToCover lineNumber="21" covered="true" />
+		<lineToCover lineNumber="22" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="25" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="27" covered="true" />
+		<lineToCover lineNumber="28" covered="true" />
+		<lineToCover lineNumber="31" covered="true" />
+		<lineToCover lineNumber="32" covered="true" />
+		<lineToCover lineNumber="33" covered="true" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="53" covered="true" />
+		<lineToCover lineNumber="55" covered="true" />
+		<lineToCover lineNumber="58" covered="true" />
+		<lineToCover lineNumber="59" covered="true" />
+		<lineToCover lineNumber="62" covered="true" />
+		<lineToCover lineNumber="64" covered="true" />
+		<lineToCover lineNumber="71" covered="true" />
+		<lineToCover lineNumber="73" covered="true" />
+		<lineToCover lineNumber="78" covered="true" />
+		<lineToCover lineNumber="80" covered="true" />
+		<lineToCover lineNumber="96" covered="true" />
+		<lineToCover lineNumber="98" covered="true" />
+		<lineToCover lineNumber="104" covered="true" />
+		<lineToCover lineNumber="106" covered="true" />
+		<lineToCover lineNumber="136" covered="true" />
+		<lineToCover lineNumber="138" covered="true" />
+		<lineToCover lineNumber="162" covered="true" />
+		<lineToCover lineNumber="164" covered="true" />
+		<lineToCover lineNumber="174" covered="true" />
+		<lineToCover lineNumber="176" covered="true" />
+		<lineToCover lineNumber="181" covered="true" />
+		<lineToCover lineNumber="182" covered="true" />
+		<lineToCover lineNumber="194" covered="true" />
+		<lineToCover lineNumber="196" covered="true" />
+		<lineToCover lineNumber="199" covered="true" />
+		<lineToCover lineNumber="200" covered="true" />
+		<lineToCover lineNumber="212" covered="true" />
+		<lineToCover lineNumber="214" covered="true" />
+		<lineToCover lineNumber="217" covered="true" />
+		<lineToCover lineNumber="218" covered="true" />
+		<lineToCover lineNumber="221" covered="true" />
+		<lineToCover lineNumber="223" covered="true" />
+		<lineToCover lineNumber="235" covered="true" />
+		<lineToCover lineNumber="237" covered="true" />
+		<lineToCover lineNumber="247" covered="true" />
+		<lineToCover lineNumber="249" covered="true" />
+		<lineToCover lineNumber="259" covered="true" />
+		<lineToCover lineNumber="261" covered="true" />
+		<lineToCover lineNumber="271" covered="true" />
+		<lineToCover lineNumber="273" covered="true" />
+		<lineToCover lineNumber="283" covered="true" />
+		<lineToCover lineNumber="285" covered="true" />
+		<lineToCover lineNumber="347" covered="true" />
+		<lineToCover lineNumber="349" covered="true" />
+		<lineToCover lineNumber="355" covered="true" />
+		<lineToCover lineNumber="357" covered="true" />
+		<lineToCover lineNumber="360" covered="true" />
+		<lineToCover lineNumber="362" covered="true" />
+		<lineToCover lineNumber="365" covered="true" />
+		<lineToCover lineNumber="367" covered="true" />
+		<lineToCover lineNumber="370" covered="true" />
+		<lineToCover lineNumber="372" covered="true" />
+		<lineToCover lineNumber="375" covered="true" />
+		<lineToCover lineNumber="377" covered="true" />
+		<lineToCover lineNumber="380" covered="true" />
+		<lineToCover lineNumber="382" covered="true" />
+		<lineToCover lineNumber="384" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;LogLevels.cfc">
+		<lineToCover lineNumber="9" covered="true" />
+		<lineToCover lineNumber="12" covered="true" />
+		<lineToCover lineNumber="13" covered="true" />
+		<lineToCover lineNumber="14" covered="true" />
+		<lineToCover lineNumber="15" covered="true" />
+		<lineToCover lineNumber="16" covered="true" />
+		<lineToCover lineNumber="17" covered="true" />
+		<lineToCover lineNumber="20" covered="true" />
+		<lineToCover lineNumber="23" covered="true" />
+		<lineToCover lineNumber="24" covered="true" />
+		<lineToCover lineNumber="26" covered="true" />
+		<lineToCover lineNumber="27" covered="false" />
+		<lineToCover lineNumber="28" covered="false" />
+		<lineToCover lineNumber="29" covered="false" />
+		<lineToCover lineNumber="30" covered="false" />
+		<lineToCover lineNumber="31" covered="false" />
+		<lineToCover lineNumber="32" covered="false" />
+		<lineToCover lineNumber="33" covered="false" />
+		<lineToCover lineNumber="34" covered="false" />
+		<lineToCover lineNumber="35" covered="true" />
+		<lineToCover lineNumber="37" covered="true" />
+		<lineToCover lineNumber="38" covered="true" />
+		<lineToCover lineNumber="39" covered="true" />
+		<lineToCover lineNumber="40" covered="true" />
+		<lineToCover lineNumber="41" covered="true" />
+		<lineToCover lineNumber="42" covered="true" />
+		<lineToCover lineNumber="43" covered="true" />
+		<lineToCover lineNumber="44" covered="true" />
+		<lineToCover lineNumber="45" covered="true" />
+		<lineToCover lineNumber="46" covered="true" />
+		<lineToCover lineNumber="47" covered="false" />
+		<lineToCover lineNumber="48" covered="false" />
+		<lineToCover lineNumber="49" covered="true" />
+		<lineToCover lineNumber="51" covered="true" />
+		<lineToCover lineNumber="52" covered="false" />
+		<lineToCover lineNumber="53" covered="false" />
+		<lineToCover lineNumber="54" covered="false" />
+		<lineToCover lineNumber="55" covered="false" />
+		<lineToCover lineNumber="56" covered="false" />
+		<lineToCover lineNumber="57" covered="false" />
+		<lineToCover lineNumber="58" covered="false" />
+		<lineToCover lineNumber="59" covered="false" />
+		<lineToCover lineNumber="60" covered="false" />
+		<lineToCover lineNumber="61" covered="true" />
+		<lineToCover lineNumber="63" covered="true" />
+		<lineToCover lineNumber="64" covered="true" />
+		<lineToCover lineNumber="65" covered="true" />
+		<lineToCover lineNumber="66" covered="true" />
+	</file>
+	<file path="C&#x3a;&#x5c;Users&#x5c;Brad.development&#x5c;Documents&#x5c;GitHub&#x5c;code-coverage-test&#x5c;wirebox&#x5c;system&#x5c;logging&#x5c;util&#x5c;FileRotator.cfc">
 	</file>
 
 </coverage>

@@ -42,8 +42,8 @@
 	fileWrite( expandPath( 'code-coverage.xml' ), local.coverageXML );
 	
 </cfscript>
-<cfoutput>
+<!---<cfoutput>
 <code><pre>
 #encodeForHTML(local.coverageXML)#	
 </pre></code>
-</cfoutput>
+</cfoutput>--->
