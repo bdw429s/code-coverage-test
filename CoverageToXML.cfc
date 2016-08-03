@@ -45,7 +45,6 @@ component accessors=true {
 		// Convert lists to an array.
 		if( isSimpleValue( arguments.whitelist ) ) { arguments.whitelist = arguments.whitelist.listToArray(); }
 		if( isSimpleValue( arguments.blacklist ) ) { arguments.blacklist = arguments.blacklist.listToArray(); }
-
 		
 		// Get a recursive list of all CFM and CFC files in project root.
 		var fileList = directoryList( arguments.pathToCapture, true, "path", "*.cf*");
@@ -74,15 +73,45 @@ component accessors=true {
 			var fileLines = fileContents.listToArray( chr( 13 ), true );
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
 			var currentLineNo=0;
+			var previousLineRan=false;
+			
 			for( var line in fileLines ) {
 				currentLineNo++;
 				if( structCount( lineMetricMap ) && lineMetricMap.containsKey( javaCast( 'int', currentLineNo ) ) ) {
 					var lineMetric = lineMetricMap.get(  javaCast( 'int', currentLineNo ) );
 					
 					var lineNode = XMLElemNew( coverageXML, 'lineToCover' );
+					var covered = ( lineMetric.getCount() > 0 ? 'true' : 'false' );
+					
+					// Overrides for bugginess ************************************************************************
+					
+					// Ignore any tag based comments.  Some are reporting as covered, others aren't.  They really all should be ignored.
+					if( reFindNoCase( '^<!---.*--->$', trim( line) ) ) {
+						continue;
+					}
+					
+					// Ignore any CFscript tags.  They don't consistently report and they aren't really executable in themselves
+					if( reFindNoCase( '<(\/)?cfscript>', trim( line) )) {
+						continue;
+					}
+					
+					// Count as covered any closing CF tags where the previous line ran.  Ending tags don't always seem to get picked up.
+					if( !covered && reFindNoCase( '<\/cf.*>', trim( line) ) && previousLineRan ) {
+						covered = true;
+					}
+										
+					// Count as covered any cffunction or cfargument tag where the previous line ran.  
+					if( !covered && reFindNoCase( '^<cf(function|argument)', trim( line) ) && previousLineRan ) {
+						covered = true;
+					}
+					
+					// Overrides for bugginess ************************************************************************
+					
 					lineNode.XMLAttributes[ 'lineNumber' ] = currentLineNo;
-					lineNode.XMLAttributes[ 'covered' ] = ( lineMetric.getCount() > 0 ? 'true' : 'false' );
+					lineNode.XMLAttributes[ 'covered' ] = covered;
 					fileNode.XMLChildren.append( lineNode );
+					
+					var previousLineRan=covered;
 				}
 				
 			}
