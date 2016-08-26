@@ -24,6 +24,10 @@ component accessors=true {
 						<xsl:strip-space elements="*"/>
 						<xsl:template match="node() | @*"><xsl:copy><xsl:apply-templates select="node() | @*" /></xsl:copy></xsl:template>
 						</xsl:stylesheet>';
+						
+		variables.CR = chr( 13 );
+		variables.LF = chr( 10 );
+		variables.CRLF = CR & LF;
 
 		return this;
 	}
@@ -66,21 +70,16 @@ component accessors=true {
 			
 			var fileContents = fileRead( theFile );
 			// Replace Windows CRLF with CR
-			fileContents = replaceNoCase( fileContents, chr( 13 ) & chr( 10 ), chr( 13 ), 'all' )
+			fileContents = replaceNoCase( fileContents, CRLF, CR, 'all' );
 			// Replace lone LF with CR
-			fileContents = replaceNoCase( fileContents, chr( 10 ), chr( 13 ), 'all' )
+			fileContents = replaceNoCase( fileContents, LF, CR, 'all' );
 			// Break on CR, keeping empty lines 
-			var fileLines = fileContents.listToArray( chr( 13 ), true );
+			var fileLines = fileContents.listToArray( CR, true );
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
 			
 			if( !structCount( lineMetricMap ) ) {
 				getPageContext().compile( makePathRelative( theFile ) );
 				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};				
-			}
-			
-			
-			if( !structCount( lineMetricMap ) ) {
-				//writeOutput( theFile & '<br>' );
 			}
 			
 			var currentLineNo=0;
