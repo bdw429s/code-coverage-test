@@ -72,6 +72,17 @@ component accessors=true {
 			// Break on CR, keeping empty lines 
 			var fileLines = fileContents.listToArray( chr( 13 ), true );
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
+			
+			if( !structCount( lineMetricMap ) ) {
+				getPageContext().compile( makePathRelative( theFile ) );
+				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};				
+			}
+			
+			
+			if( !structCount( lineMetricMap ) ) {
+				//writeOutput( theFile & '<br>' );
+			}
+			
 			var currentLineNo=0;
 			var previousLineRan=false;
 			
@@ -165,4 +176,42 @@ component accessors=true {
 			// We passed all the checks
 			return true;					
 	}
+	
+	    
+    /** 
+    * Accepts an absolute path and returns a relative path
+    * Does NOT apply any canonicalization 
+    */
+    string function makePathRelative( required string absolutePath ) {
+    	if( !isWindows() ) { 
+    		return arguments.absolutePath;
+    	}
+    	var driveLetter = listFirst( arguments.absolutePath, ':' );
+    	var path = listRest( arguments.absolutePath, ':' );
+    	var mapping = locateMapping( driveLetter );
+    	return mapping & path;
+    }
+    
+    /** 
+    * Accepts a Windows drive letter and returns a CF Mapping
+    * Creates the mapping if it doesn't exist
+    */
+    string function locateMapping( required string driveLetter  ) {
+    	var mappingName = '/' & arguments.driveLetter & '_drive';
+    	var mappingPath = arguments.driveLetter & ':/';
+    	var mappings = getApplicationSettings().mappings;
+    	if( !structKeyExists( mappings, mappingName ) ) {
+    		mappings[ mappingName ] = mappingPath;
+    		application action='update' mappings='#mappings#';
+   		}
+   		return mappingName;
+    }
+    
+    /** 
+    * Detect if OS is Windows
+    */
+	boolean function isWindows(){
+		return createObject( "java", "java.lang.System" ).getProperty( "os.name" ).toLowerCase().contains( "win" );
+	}
+	
 }
