@@ -75,10 +75,15 @@ component accessors=true {
 			fileContents = replaceNoCase( fileContents, LF, CR, 'all' );
 			// Break on CR, keeping empty lines 
 			var fileLines = fileContents.listToArray( CR, true );
+			//writeDump( fragentClass.getAgentInstrumentation().get("cflpi").getSourceFiles() ); //abort;
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
+			//fragentClass.getAgentInstrumentation().get("cflpi").reset();
 			
+			// If we don't have any metrics for this file 
 			if( !structCount( lineMetricMap ) ) {
-				getPageContext().compile( makePathRelative( theFile ) );
+				// Attempt to compile and load the class
+				getPageContext().getPageSources( makePathRelative( theFile ) )[1].loadPage( getPageContext(), true );
+				// Check for metrics again 
 				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};				
 			}
 			
