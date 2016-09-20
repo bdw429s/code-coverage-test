@@ -1,11 +1,11 @@
 {
-    "jvm":{
-        "args":"-javaagent:D:\\FR6\\fusionreactor.jar=name=coverage,address=8088"
-    },
     "name":"coverage-test",
     "web":{
         "http":{
             "port":8582
         }
+    },
+    "app":{
+        "cfengine":"lucee@4"
     }
 }

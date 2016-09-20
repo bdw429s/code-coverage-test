@@ -16,7 +16,15 @@ component accessors=true {
 	function init() {
 		// Classes needed to work.
 		variables.pathPatternMatcher = new PathPatternMatcher();
-		variables.fragentClass = createObject( 'java', 'com.intergral.fusionreactor.agent.Agent' );
+		try {
+			variables.fragentClass = createObject( 'java', 'com.intergral.fusionreactor.agent.Agent' );
+		} catch( Any e ) {
+			throw( message='Error loading the FusionReactor agent class.  Please ensure FusionReactor is installed', detail=e.message );
+		}
+	
+		//writeDump( fragentClass.getAgentInstrumentation().get("cflpi").getSourceFiles() ); //abort;
+		//fragentClass.getAgentInstrumentation().get("cflpi").reset();
+		//writeDump( fragentClass.getAgentInstrumentation().get("cflpi") ); abort;
 		
 		// This transformation will format an XML documente to be indented with line breaks for readability
 		variables.xlt = '<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -75,16 +83,20 @@ component accessors=true {
 			fileContents = replaceNoCase( fileContents, LF, CR, 'all' );
 			// Break on CR, keeping empty lines 
 			var fileLines = fileContents.listToArray( CR, true );
-			//writeDump( fragentClass.getAgentInstrumentation().get("cflpi").getSourceFiles() ); //abort;
+			
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
-			//fragentClass.getAgentInstrumentation().get("cflpi").reset();
+			
+			// Turn on line profiling
+			fragentClass.getAgentInstrumentation().get("cflpi").setActive( true );
+			
 			
 			// If we don't have any metrics for this file 
 			if( !structCount( lineMetricMap ) ) {
+				var PageSourceImpl = createObject( 'java', 'lucee.runtime.PageSourceImpl' );
 				// Attempt to compile and load the class
-				getPageContext().getPageSources( makePathRelative( theFile ) )[1].loadPage( getPageContext(), true );
+				PageSourceImpl.best( getPageContext().getPageSources( makePathRelative( theFile ) ) ).loadPage( getPageContext(), true );
 				// Check for metrics again 
-				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};				
+				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
 			}
 			
 			var currentLineNo=0;
