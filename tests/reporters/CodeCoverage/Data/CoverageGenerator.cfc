@@ -4,18 +4,14 @@
 * www.ortussolutions.com
 * ********************************************************************************
 * I collect code coverage data for a directory of files and generate
-* an XML document for import into SonarQube's Generic Code Coverage plugin.
+* a query of data that can be consumed by different reporting interfaces.
 */
 component accessors=true {
-	
-	/**
-	* If set to true, the XML document will be formatted for human readability
-	*/
-	property name="formatXML" default="false";
 	
 	function init() {
 		// Classes needed to work.
 		variables.pathPatternMatcher = new PathPatternMatcher();
+		variables.templateCompiler = new TemplateCompiler();
 		try {
 			variables.fragentClass = createObject( 'java', 'com.intergral.fusionreactor.agent.Agent' );
 		} catch( Any e ) {
@@ -23,15 +19,7 @@ component accessors=true {
 		}
 	
 		//writeDump( fragentClass.getAgentInstrumentation().get("cflpi").getSourceFiles() ); //abort;
-		//fragentClass.getAgentInstrumentation().get("cflpi").reset();
 		//writeDump( fragentClass.getAgentInstrumentation().get("cflpi") ); abort;
-		
-		// This transformation will format an XML documente to be indented with line breaks for readability
-		variables.xlt = '<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-						<xsl:output method="xml" encoding="utf-8" indent="yes" xslt:indent-amount="2" xmlns:xslt="http://xml.apache.org/xslt" />
-						<xsl:strip-space elements="*"/>
-						<xsl:template match="node() | @*"><xsl:copy><xsl:apply-templates select="node() | @*" /></xsl:copy></xsl:template>
-						</xsl:stylesheet>';
 						
 		variables.CR = chr( 13 );
 		variables.LF = chr( 10 );
@@ -41,30 +29,50 @@ component accessors=true {
 	}
 	
 	/**
+	* Reset system for a new test.  Turns on line coverage and resets in-memory statistics
+	*/
+	function beginCapture() {
+		// Turn on line profiling
+		fragentClass.getAgentInstrumentation().get("cflpi").setActive( true );
+		// Clear any data in memory
+		fragentClass.getAgentInstrumentation().get("cflpi").reset();
+	}
+	
+	/**
+	* End the capture of data.  Clears up memory and optionally turns off line profiling
+	* @leaveLineProfilingOn Set to true to leave line profiling enabled on the server
+	*/
+	function endCapture( leaveLineProfilingOn=false  ) {
+		// Turn off line profiling
+		if( !leaveLineProfilingOn ) {
+			fragentClass.getAgentInstrumentation().get("cflpi").setActive( false ); 			
+		}
+		// Clear any data in memory
+		fragentClass.getAgentInstrumentation().get("cflpi").reset();
+	}
+	
+	/**
 	* @pathToCapture The full path to a folder of code.  Searched recursivley
 	* @whitelist Comma-delimeted list or array of file paths to include
 	* @blacklist Comma-delimeted list or array of file paths to exclude
-	* @XMLOutputPath Full path to write XML file to
 	*
-	* @Returns generated XML string
+	* @Returns query of data
 	*/
-	string function generateXML(
-		required string pathToCapture = expandPath( '/root' ),
+	query function generateData(
+		required string pathToCapture,
 		any whitelist='',		
-		any blacklist='',
-		string XMLOutputPath=''
+		any blacklist=''
 	) {
 		// Convert lists to an array.
 		if( isSimpleValue( arguments.whitelist ) ) { arguments.whitelist = arguments.whitelist.listToArray(); }
 		if( isSimpleValue( arguments.blacklist ) ) { arguments.blacklist = arguments.blacklist.listToArray(); }
 		
-		// Get a recursive list of all CFM and CFC files in project root.
+		// Get a recursive list of all CFM and CFC files in  project root.
 		var fileList = directoryList( arguments.pathToCapture, true, "path", "*.cf*");
 		
-		var coverageXML = XMLNew();
-		var rootNode = XMLElemNew( coverageXML, 'coverage' );
-		rootNode.XMLAttributes[ 'version' ] = 1;
-	
+		// start data structure
+		var qryData = queryNew( "filePath,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData" );
+
 		for( var theFile in fileList ) {
 			
 			// Skip this file if it doesn't match our patterns
@@ -72,9 +80,6 @@ component accessors=true {
 			if( !isPathAllowed( replaceNoCase( theFile, arguments.pathToCapture, '' ), arguments.whitelist, arguments.blacklist ) ) {
 				continue;
 			}
-			
-			var fileNode = XMLElemNew( coverageXML, 'file' );
-			fileNode.XMLAttributes[ 'path' ] = theFile;
 			
 			var fileContents = fileRead( theFile );
 			// Replace Windows CRLF with CR
@@ -84,31 +89,39 @@ component accessors=true {
 			// Break on CR, keeping empty lines 
 			var fileLines = fileContents.listToArray( CR, true );
 			
+			// new file: theFile
+			var strFiledata = {
+				filePath = theFile,
+				numLines = arrayLen( fileLines ),
+				numCoveredLines = 0,
+				numExecutableLines = 0,
+				percCoverage = 0
+			};
+			// Add this to query later
+			var lineData = createObject( 'java', 'java.util.LinkedHashMap' ).init();
+			
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
-			
-			// Turn on line profiling
-			fragentClass.getAgentInstrumentation().get("cflpi").setActive( true );
-			
-			
-			// If we don't have any metrics for this file 
-			if( !structCount( lineMetricMap ) ) {
-				var PageSourceImpl = createObject( 'java', 'lucee.runtime.PageSourceImpl' );
-				// Attempt to compile and load the class
-				PageSourceImpl.best( getPageContext().getPageSources( makePathRelative( theFile ) ) ).loadPage( getPageContext(), true );
+						
+			// If we don't have any metrics for this file, and we're on Railo or Lucee, attempt to force the file to load.
+			if( 
+					!structCount( lineMetricMap ) 
+					&& ( structKeyExists( server, 'lucee' ) || structKeyExists( server, 'railo' ) ) 
+				) {
+				// Force the engine to compile and load the file even though it was never run. 
+				templateCompiler.compileAndLoad( theFile );
 				// Check for metrics again 
 				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
 			}
 			
-			var currentLineNo=0;
-			var previousLineRan=false;
+			var currentLineNum=0;
+			var previousLineRan=0;
 			
 			for( var line in fileLines ) {
-				currentLineNo++;
-				if( structCount( lineMetricMap ) && lineMetricMap.containsKey( javaCast( 'int', currentLineNo ) ) ) {
-					var lineMetric = lineMetricMap.get(  javaCast( 'int', currentLineNo ) );
-					
-					var lineNode = XMLElemNew( coverageXML, 'lineToCover' );
-					var covered = ( lineMetric.getCount() > 0 ? 'true' : 'false' );
+				currentLineNum++;
+				if( structCount( lineMetricMap ) && lineMetricMap.containsKey( javaCast( 'int', currentLineNum ) ) ) {
+					strFiledata.numExecutableLines++;
+					var lineMetric = lineMetricMap.get(  javaCast( 'int', currentLineNum ) );
+					var covered = lineMetric.getCount()
 					
 					// Overrides for bugginess ************************************************************************
 					
@@ -124,46 +137,36 @@ component accessors=true {
 					
 					// Count as covered any closing CF tags where the previous line ran.  Ending tags don't always seem to get picked up.
 					if( !covered && reFindNoCase( '<\/cf.*>', trim( line) ) && previousLineRan ) {
-						covered = true;
+						covered = previousLineRan;
 					}
 										
 					// Count as covered any cffunction or cfargument tag where the previous line ran.  
 					if( !covered && reFindNoCase( '^<cf(function|argument)', trim( line) ) && previousLineRan ) {
-						covered = true;
+						covered = previousLineRan;
 					}
 					
 					// Overrides for bugginess ************************************************************************
 					
-					lineNode.XMLAttributes[ 'lineNumber' ] = currentLineNo;
-					lineNode.XMLAttributes[ 'covered' ] = covered;
-					fileNode.XMLChildren.append( lineNode );
+					lineData[ currentLineNum ] = covered;
 					
+					if( covered ) {
+						strFiledata.numCoveredLines++;
+					}
 					var previousLineRan=covered;
 				}
 				
 			}
 			
-			rootNode.XMLChildren.append( fileNode );
+			if( strFiledata.numExecutableLines ) {
+				strFiledata.percCoverage = strFiledata.numCoveredLines/strFiledata.numExecutableLines;				
+			}
+			queryAddRow( qryData, strFiledata );
+			qryData[ 'lineData' ][ qryData.recordCount ] = lineData;
 		
 		}
-			
-		coverageXML.XMLChildren.append( rootNode );
 		
-		if( getFormatXML() ) {
-			// Clean up formatting on XML doc and convert to string
-			coverageXML = XmlTransform( coverageXML, variables.xlt );			
-		}		
-				
-		// Convert to string
-		var coverageXMLString = toString( coverageXML ); 
-		
-		// If there is an output path, write it to a file
-		if( len( XMLOutputPath ) ) {
-			fileWrite( arguments.XMLOutputPath, coverageXMLString );
-		}
-		
-		// Return the XML string
-		return coverageXMLString;
+		// Return the data
+		return qryData;
 
 	}
 	
@@ -191,43 +194,6 @@ component accessors=true {
 			
 			// We passed all the checks
 			return true;					
-	}
-	
-	    
-    /** 
-    * Accepts an absolute path and returns a relative path
-    * Does NOT apply any canonicalization 
-    */
-    string function makePathRelative( required string absolutePath ) {
-    	if( !isWindows() ) { 
-    		return arguments.absolutePath;
-    	}
-    	var driveLetter = listFirst( arguments.absolutePath, ':' );
-    	var path = listRest( arguments.absolutePath, ':' );
-    	var mapping = locateMapping( driveLetter );
-    	return mapping & path;
-    }
-    
-    /** 
-    * Accepts a Windows drive letter and returns a CF Mapping
-    * Creates the mapping if it doesn't exist
-    */
-    string function locateMapping( required string driveLetter  ) {
-    	var mappingName = '/' & arguments.driveLetter & '_drive';
-    	var mappingPath = arguments.driveLetter & ':/';
-    	var mappings = getApplicationSettings().mappings;
-    	if( !structKeyExists( mappings, mappingName ) ) {
-    		mappings[ mappingName ] = mappingPath;
-    		application action='update' mappings='#mappings#';
-   		}
-   		return mappingName;
-    }
-    
-    /** 
-    * Detect if OS is Windows
-    */
-	boolean function isWindows(){
-		return createObject( "java", "java.lang.System" ).getProperty( "os.name" ).toLowerCase().contains( "win" );
 	}
 	
 }
