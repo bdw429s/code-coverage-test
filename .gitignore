@@ -220,3 +220,4 @@ pip-log.txt
 /wirebox
 /testbox
 *.xml
+/server.json
