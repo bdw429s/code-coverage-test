@@ -67,6 +67,7 @@ component accessors=true {
 			SELECT *
 			FROM qryData
 			WHERE filePath NOT IN ( #listBestFilePaths# )
+				AND percCoverage < 1
 			ORDER BY percCoverage ASC, filePath
 			', {}, { dbtype='query', maxRows=10 } );		
 		
