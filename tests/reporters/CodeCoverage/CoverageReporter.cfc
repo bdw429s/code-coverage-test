@@ -1,3 +1,33 @@
+/**
+* ********************************************************************************
+* Copyright Ortus Solutions, Corp
+* www.ortussolutions.com
+* ********************************************************************************
+*
+* I am a custom TestBox repoter that captures line coverage data.  Use me like so:
+*
+* testbox = new testbox.system.TestBox(
+*	directory={
+*		mapping = url.directory,
+*		recurse = url.recurse
+*	},
+*	reporter={
+*	    type = "tests.reporters.CodeCoverage.CoverageReporter",
+*	    options = {
+*		  	pathToCapture = expandPath( '/root' ),
+*			whitelist = '/models,/handlers,/modules_app',
+*			blacklist = '/tests,/temp',
+*	    	passThruReporter={
+*	    		type='simple',
+*	    		option={}
+*	    	},
+*	    	sonarQube = {
+*				XMLOutputPath = expandpath( '/tests/sonarqube-codeCoverage.xml' )
+*	    	}
+*	    }
+*	} );
+*
+*/
 component {
 
 	/**
@@ -31,6 +61,14 @@ component {
 	  	opts.pathToCapture = opts.pathToCapture ?: '';
 		opts.whitelist = opts.whitelist ?: '';
 		opts.blacklist = opts.blacklist ?: '';
+	  	
+	  	// validate path to capture
+	  	if( !len( opts.pathToCapture ) ) {
+	  		throw( message='Please provide [options.pathToCapture] to the reporter.', detail='The [pathToCapture] option should be an absolute path that points to a directory of CFML code executed by your tests.' );
+	  	}	  	
+	  	if( !directoryExists( opts.pathToCapture ) ) {
+	  		throw( message='Reporter option [pathToCapture] does not point to a real and absolute directory path.', detail=opts.pathToCapture );
+	  	}
 	  	
 	  	// *************** Prepare coverage data ***************
 		var coverageGenerator = new data.coverageGenerator();
