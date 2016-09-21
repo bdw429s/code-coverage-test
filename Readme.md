@@ -8,7 +8,12 @@ CommandBox> install bdw429s/code-coverage-test
 CommandBox> start
 ```
 
-You'll need to edit the path to the Fusion-Reactor jar in `server.json`.  This only works with FR `6.2.0` (Released on 7/27/2016).
+To use the CommandBox embedded server, install the `commandbox-fusionreactor` module and register your FusionReactor license key.
+
+```
+install commandbox-fusionreactor
+fr register "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+```
 
 The CF Performance Explorer app from Integral will install to `/cfperformanceexplorer`.
 
