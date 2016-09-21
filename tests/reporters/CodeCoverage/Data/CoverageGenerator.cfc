@@ -119,7 +119,6 @@ component accessors=true {
 			for( var line in fileLines ) {
 				currentLineNum++;
 				if( structCount( lineMetricMap ) && lineMetricMap.containsKey( javaCast( 'int', currentLineNum ) ) ) {
-					strFiledata.numExecutableLines++;
 					var lineMetric = lineMetricMap.get(  javaCast( 'int', currentLineNum ) );
 					var covered = lineMetric.getCount()
 					
@@ -149,6 +148,7 @@ component accessors=true {
 					
 					lineData[ currentLineNum ] = covered;
 					
+					strFiledata.numExecutableLines++;
 					if( covered ) {
 						strFiledata.numCoveredLines++;
 					}

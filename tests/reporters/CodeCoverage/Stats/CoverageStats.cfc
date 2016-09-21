@@ -52,11 +52,11 @@ component accessors=true {
 
 		// Get files with best coverage
 		var qryBest = queryExecute( '
-			SELECT TOP 10 *
+			SELECT *
 			FROM qryData
 			WHERE percCoverage > 0
 			ORDER BY percCoverage DESC, filePath
-			', {}, { dbtype='query' } );		
+			', {}, { dbtype='query', maxRows=10 } );		
 		
 		stats.qryFilesBestCoverage = qryBest;
 
@@ -64,11 +64,11 @@ component accessors=true {
 		
 		// Get files with worst coverage (exclude files already listed under "best" coverage)
 		var qryWorst = queryExecute( '
-			SELECT TOP 10 *
+			SELECT *
 			FROM qryData
 			WHERE filePath NOT IN ( #listBestFilePaths# )
 			ORDER BY percCoverage ASC, filePath
-			', {}, { dbtype='query' } );		
+			', {}, { dbtype='query', maxRows=10 } );		
 		
 		stats.qryFilesWorstCoverage = qryWorst;
 				
