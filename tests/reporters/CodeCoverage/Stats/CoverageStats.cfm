@@ -1,3 +1,6 @@
+<!--- 
+	Template for outputting overview stats about the line coverage details that were captured.
+ --->
 <cfoutput>
 	<cfif isDefined( 'stats' )>
 		<ul>

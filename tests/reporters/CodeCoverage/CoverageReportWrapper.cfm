@@ -1,3 +1,6 @@
+<!---
+	HTML template for Code Coverage reporter.  Includes details about SonarQube generation, overview stats, and a passthrough reporter
+ --->
 <cfoutput>
 <!DOCTYPE html>
 <html>
