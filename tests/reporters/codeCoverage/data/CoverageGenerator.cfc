@@ -71,13 +71,14 @@ component accessors=true {
 		var fileList = directoryList( arguments.pathToCapture, true, "path", "*.cf*");
 		
 		// start data structure
-		var qryData = queryNew( "filePath,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData" );
+		var qryData = queryNew( "filePath,relativeFilePath,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData" );
 
 		for( var theFile in fileList ) {
+			var relativeFilePath = replaceNoCase( theFile, arguments.pathToCapture, '' );
 			
 			// Skip this file if it doesn't match our patterns
 			// Pass a path relative to our root folder
-			if( !isPathAllowed( replaceNoCase( theFile, arguments.pathToCapture, '' ), arguments.whitelist, arguments.blacklist ) ) {
+			if( !isPathAllowed( relativeFilePath, arguments.whitelist, arguments.blacklist ) ) {
 				continue;
 			}
 			
@@ -92,6 +93,7 @@ component accessors=true {
 			// new file: theFile
 			var strFiledata = {
 				filePath = theFile,
+				relativeFilePath = relativeFilePath,
 				numLines = arrayLen( fileLines ),
 				numCoveredLines = 0,
 				numExecutableLines = 0,

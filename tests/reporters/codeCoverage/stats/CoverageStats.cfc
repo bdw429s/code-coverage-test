@@ -31,7 +31,7 @@ component accessors=true {
 		
 		// Remove the lineData column so it doesn't confuse the QofQ engine.
 		var qryData = queryExecute( '
-			SELECT filePath, numLines, numCoveredLines, numExecutableLines, percCoverage
+			SELECT filePath, relativeFilePath, numLines, numCoveredLines, numExecutableLines, percCoverage
 			FROM qryCoverageData
 			', {}, { dbtype='query' } );
 		

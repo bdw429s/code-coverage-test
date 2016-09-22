@@ -23,6 +23,9 @@ testbox = new testbox.system.TestBox(
 	    	},
 	    	sonarQube = {
 				XMLOutputPath = expandpath( '/tests/sonarqube-codeCoverage.xml' )
+	    	},
+	    	browser = {
+	    		OutputDir = expandPath( '/tests/CoverageBrowser' )
 	    	}
 	    }
 	} );

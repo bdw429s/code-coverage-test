@@ -14,7 +14,11 @@
 			#sonarQubeResults#<br><br>
 		</cfif>
 		
-		#statsResults#
+		<cfif len( opts.browser.outputDir ) >
+			Coverage Browser generated in #opts.browser.outputDir#<br><br>
+		</cfif>
+				
+		#statsHTML#
 		
 		#nestedReporterResult#	
 	</body>
