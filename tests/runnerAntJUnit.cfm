@@ -1,8 +1,9 @@
 ﻿<cfsetting showDebugOutput="false">
 
-<cfparam name="url.reporter" 			default="simple">
-<cfparam name="url.directory" 		default="tests.specs">
-<cfparam name="url.recurse" 			default="true" type="boolean">
+<cfparam name="url.reporter"	default="simple">
+<cfparam name="url.directory"	default="tests.specs">
+<cfparam name="url.recurse"		default="true" type="boolean">
+<cfparam name="url.reportpath"	default="">
 <cfscript>
 
 coverageGenerator = new tests.reporters.CodeCoverage.data.coverageGenerator();
@@ -18,8 +19,17 @@ testbox = new testbox.system.TestBox(
 			whitelist = '',
 			blacklist = 'cfperformanceexplorer,/testbox,/tests,/index.cfm,/Application.cfc',
 	    	passThroughReporter={
-	    		type='simple',
-	    		option={}
+	    		type='ANTJunit',
+	    		option={},
+	    		resultsUDF=function( reporterData ) {
+	    			// Produce individual test files due to how ANT JUnit report parses these.
+				    var xmlReport = xmlParse( reporterData.results );
+				    for( var thisSuite in xmlReport.testsuites.XMLChildren ){
+				        fileWrite( url.reportpath & "/TEST-" & thisSuite.XMLAttributes.package & ".xml", toString( thisSuite ) );
+				    }
+				    // format results so they display nice in the coverage output (optional)
+				    reporterData.results = '<pre>' & encodeForHTML( reporterData.results ) & '<pre>';
+	    		}
 	    	},
 	    	sonarQube = {
 				XMLOutputPath = expandpath( '/tests/sonarqube-codeCoverage.xml' )

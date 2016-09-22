@@ -17,7 +17,7 @@
 *		  	pathToCapture = expandPath( '/root' ),
 *			whitelist = '/models,/handlers,/modules_app',
 *			blacklist = '/tests,/temp',
-*	    	passThruReporter={
+*	    	passThroughReporter={
 *	    		type='simple',
 *	    		option={}
 *	    	},
@@ -52,12 +52,15 @@ component {
 	){
 	  	// *************** Default options ***************
 	  	var opts = arguments.options ?: {};
-	  	opts.passThruReporter = opts.passThruReporter ?: {
-  			type = 'simple',
-  			options = {}
-	  	};
+	  	
+	  	opts.passThroughReporter = opts.passThroughReporter ?: {};
+	  	opts.passThroughReporter.type = opts.passThroughReporter.type ?: 'simple';
+	  	opts.passThroughReporter.options = opts.passThroughReporter.options ?: {};
+	  	// Not defaulting opts.passThroughReporter.resultsUDF
+	  	
 	  	opts.sonarQube = opts.sonarQube ?: {};
-		opts.sonarQube.XMLOutputPath = opts.sonarQube.XMLOutputPath ?: '';		
+		opts.sonarQube.XMLOutputPath = opts.sonarQube.XMLOutputPath ?: '';
+				
 	  	opts.pathToCapture = opts.pathToCapture ?: '';
 		opts.whitelist = opts.whitelist ?: '';
 		opts.blacklist = opts.blacklist ?: '';
@@ -100,19 +103,33 @@ component {
 	  	
 	  	// *************** Execute pass-through reporter ***************
 	  	var nestedReporterResult = '';
-	  	if( len( arguments.options.passThruReporter.type ) ) {
+	  	if( len( arguments.options.passThroughReporter.type ) ) {
 			testbox.exposeBuildReporter = variables.exposeBuildReporter;
 			testbox.exposeBuildReporter();
 			
 			var nestedReporter = testbox.buildReporter( 
-				arguments.options.passThruReporter.type,
-				arguments.options.passThruReporter.options ?: {}
+				arguments.options.passThroughReporter.type,
+				arguments.options.passThroughReporter.options ?: {}
 			);
 			
-			nestedReporterResult = nestedReporter.runReport( arguments.results, arguments.testbox, {} );	  		
+			nestedReporterResult = nestedReporter.runReport( arguments.results, arguments.testbox, {} );
+			
+			// If provided, execute a closure against 
+			if( structKeyExists( opts.passThroughReporter, 'resultsUDF' ) ) {
+				// Setup struct so we can pass the results via reference
+				var reporterData = {
+					passThroughReporter = opts.passThroughReporter,
+					results = nestedReporterResult
+				};
+				// Execute UDF
+				opts.passThroughReporter.resultsUDF( reporterData=reporterData );
+				// Update results in case they changed
+				nestedReporterResult = reporterData.results;
+			}	  		
 	  	}
 		
 		// prepare the wrapper report
+		getPageContext().getResponse().setContentType( "text/html" );
 		savecontent variable="local.report"{
 			include "CoverageReportWrapper.cfm";
 		}
