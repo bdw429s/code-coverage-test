@@ -19,7 +19,12 @@
 *			blacklist = '/tests,/temp',
 *	    	passThroughReporter={
 *	    		type='simple',
-*	    		option={}
+*	    		option={},
+	    		// This closure will be run against the results from the passthroguh reporter.
+	    		resultsUDF=function( reporterData ) {
+	    			fileWrite( 'myResults.xml', reporterData.results );
+				    reporterData.results = '<pre>' & encodeForHTML( reporterData.results ) & '<pre>';
+	    		}
 *	    	},
 *	    	sonarQube = {
 *				XMLOutputPath = expandpath( '/tests/sonarqube-codeCoverage.xml' )
@@ -51,8 +56,28 @@ component {
 		struct options
 	){
 	  	// *************** Default options ***************
-	  	var opts = arguments.options ?: {};
+	  	var opts = setDefaultOptions( arguments.options ?: {} );
 	  	
+	  	// *************** Prepare coverage data ***************
+	  	var qryCoverageData = generateCoverageData( opts );
+	  				
+	  	// *************** SonarQube Integration ***************
+	  	var sonarQubeResults = processSonarQube( qryCoverageData, opts );
+	  		  	
+	  	// ***************  Generate Stats ***************
+	  	var statsResults = processStats( qryCoverageData );
+	  	
+	  	// *************** Execute pass-through reporter ***************
+	  	var nestedReporterResult =  processPassThroughReporter( opts, results, testbox );
+		
+	  	// *************** Prepare the wrapper report ***************
+		return processWrapperReport( sonarQubeResults, statsResults, nestedReporterResult, testbox, results );
+	}
+
+	/**
+	* Default user option struct and do some validation
+	*/
+	private function setDefaultOptions( struct opts={} ) {  	
 	  	opts.passThroughReporter = opts.passThroughReporter ?: {};
 	  	opts.passThroughReporter.type = opts.passThroughReporter.type ?: 'simple';
 	  	opts.passThroughReporter.options = opts.passThroughReporter.options ?: {};
@@ -68,21 +93,30 @@ component {
 	  	// validate path to capture
 	  	if( !len( opts.pathToCapture ) ) {
 	  		throw( message='Please provide [options.pathToCapture] to the reporter.', detail='The [pathToCapture] option should be an absolute path that points to a directory of CFML code executed by your tests.' );
-	  	}	  	
+	  	}
+	  		  	
 	  	if( !directoryExists( opts.pathToCapture ) ) {
 	  		throw( message='Reporter option [pathToCapture] does not point to a real and absolute directory path.', detail=opts.pathToCapture );
 	  	}
-	  	
-	  	// *************** Prepare coverage data ***************
+		return opts;
+	}
+
+	/**
+	* Interface with FusionReactor to build coverage data
+	*/
+	private function generateCoverageData( required struct opts ) {		
 		var coverageGenerator = new data.coverageGenerator();
-		var qryCoverageData = coverageGenerator.generateData( 
+		return coverageGenerator.generateData( 
 				opts.pathToCapture,
 				opts.whitelist,
 				opts.blacklist
 			);
-			
-	  	// *************** SonarQube Integration ***************
-	  	var sonarQubeResults = '';
+	}
+
+	/**
+	* Write out SonarQube generic coverage XML file
+	*/
+	private function processSonarQube( required query qryCoverageData, required struct opts ) {
 	  	if( len( opts.sonarQube.XMLOutputPath ) ) {
 			// Create XML generator
 			var sonarQube = new sonarqube.SonarQube();
@@ -90,26 +124,37 @@ component {
 			sonarQube.setFormatXML( true );
 			
 			// Generate XML (writes file and returns string
-			var coverageXMLString = sonarQube.generateXML( qryCoverageData, opts.sonarQube.XMLOutputPath );
-	  		sonarQubeResults = 'SonarQube code coverage XML file generated at #opts.sonarQube.XMLOutputPath#';
+			sonarQube.generateXML( qryCoverageData, opts.sonarQube.XMLOutputPath );
+	  		return 'SonarQube code coverage XML file generated at #opts.sonarQube.XMLOutputPath#';
 	  	}
-	  		  	
-	  	// ***************  Generate Stats ***************
+  		return '';
+	}
+	
+
+	/**
+	* Generate statistics from the coverage data
+	*/
+	private function processStats( required query qryCoverageData ) {
 	  	var coverageStats = new stats.CoverageStats();
 	  	var stats = coverageStats.generateStats( qryCoverageData );
-		savecontent variable="local.statsResults"{
+		savecontent variable="local.statsResults" {
 			include "stats/CoverageStats.cfm";
 		}
-	  	
-	  	// *************** Execute pass-through reporter ***************
+		return local.statsResults;
+	}
+	
+	/**
+	* Run the passthrough reporter 
+	*/
+	private function processPassThroughReporter( required struct opts, results, testbox ) {
 	  	var nestedReporterResult = '';
-	  	if( len( arguments.options.passThroughReporter.type ) ) {
+	  	if( len( opts.passThroughReporter.type ) ) {
 			testbox.exposeBuildReporter = variables.exposeBuildReporter;
 			testbox.exposeBuildReporter();
 			
 			var nestedReporter = testbox.buildReporter( 
-				arguments.options.passThroughReporter.type,
-				arguments.options.passThroughReporter.options ?: {}
+				opts.passThroughReporter.type,
+				opts.passThroughReporter.options ?: {}
 			);
 			
 			nestedReporterResult = nestedReporter.runReport( arguments.results, arguments.testbox, {} );
@@ -125,19 +170,28 @@ component {
 				opts.passThroughReporter.resultsUDF( reporterData=reporterData );
 				// Update results in case they changed
 				nestedReporterResult = reporterData.results;
-			}	  		
+			}
 	  	}
-		
-		// prepare the wrapper report
+	  	return nestedReporterResult;
+	}
+	
+
+	/**
+	* Generate our final HTML to display
+	*/
+	private function processWrapperReport( sonarQubeResults, statsResults, nestedReporterResult, testbox, results ) {
 		getPageContext().getResponse().setContentType( "text/html" );
-		savecontent variable="local.report"{
+		savecontent variable="local.report" {
 			include "CoverageReportWrapper.cfm";
 		}
-
 		return local.report;
 	}
 
-	// This is a mixin that will expose the buildReporter() method in the TestBox component
+	
+
+	/**
+	* This is a mixin that will expose the buildReporter() method in the TestBox component
+	*/
 	private function exposeBuildReporter() {
 		this.buildReporter = variables.buildReporter;
 	}
