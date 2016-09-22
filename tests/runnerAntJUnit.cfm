@@ -21,6 +21,7 @@ testbox = new testbox.system.TestBox(
 	    	passThroughReporter={
 	    		type='ANTJunit',
 	    		option={},
+	    		// This closure will be run against the results from the passthroguh reporter.
 	    		resultsUDF=function( reporterData ) {
 	    			// Produce individual test files due to how ANT JUnit report parses these.
 				    var xmlReport = xmlParse( reporterData.results );
