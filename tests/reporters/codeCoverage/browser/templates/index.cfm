@@ -17,25 +17,14 @@
 		</tr>
 		<cfloop query="qryCoverageDataSorted">
 		<tr>
-			<td>#relativeFilePath#</td>
+			<!--- Coverage files are named after "real" files --->
+			<cfset link = "#replace( relativeFilePath, '\', '/', 'all' )#.html">
+			<!--- Trim of leading slash so it's relative --->
+			<cfset link = right( link, len( link )-1 )>
+			<td><a href="#link#">#relativeFilePath#</a></td>
 			<td bgcolor="#percentToColor( percCoverage )#">#round( percCoverage*100 )#%</td>
 		</tr>
 		</cfloop>
 	</table>
 	
 </cfoutput>
-
-<cfscript>
-	// visually reward or shame the user
-	// TODO: add more variations of color
-	function percentToColor( required number percentage ) {
-		percentage = round( percentage*100 );
-		if( percentage >=85 ) {
-			return 'green';
-		} else if( percentage >=50 ) {
-			return 'orange';
-		} else {
-			return 'red';
-		}
-	}
-</cfscript>
