@@ -1,6 +1,6 @@
 <cfoutput>
 	<h1>#fileData.relativeFilePath#</h1>
-	<h2>File coverage: fileData.percCoverage <span style="color:#percentToColor( fileData.percCoverage )#">#round( fileData.percCoverage*100 )#%</span></h2>
+	<h2>File coverage: <span style="color:#percentToColor( fileData.percCoverage )#">#round( fileData.percCoverage*100 )#%</span></h2>
 	<a href="javascript:history.back()"><< Back <<</a>	
 	<hr width="100%">
 		
