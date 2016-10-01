@@ -21,8 +21,14 @@ component accessors=true {
 		
 		try {
 			variables.fragentClass = createObject( 'java', 'com.intergral.fusionreactor.agent.Agent' );
+			// Do a quick test to ensure the line performance instrumentation is loaded.  This will return null for non-supported versions of FR
+			var instrumentation = fragentClass.getAgentInstrumentation().get("cflpi");
 		} catch( Any e ) {
 			throw( message='Error loading the FusionReactor agent class.  Please ensure FusionReactor is installed', detail=e.message );
+		}
+		
+		if( isNull( instrumentation ) ) {
+			throw( message='FusionReactor''s instrumentation returned null for [cflpi].', detail='Please ensure you''re using a supported version of FusionReactor.' );
 		}
 	
 		//writeDump( fragentClass.getAgentInstrumentation().get("cflpi").getSourceFiles() ); //abort;
