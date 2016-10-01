@@ -9,17 +9,17 @@
 			<li>
 				<strong>Files with best coverage:</strong>
 				<ol>
-					<cfoutput query="stats.qryFilesBestCoverage">
+					<cfloop query="stats.qryFilesBestCoverage">
 						<li>#filePath# - #round( percCoverage*100 )#%</li>
-					</cfoutput>
+					</cfloop>
 				</ol>
 			</li>
 			<li>
 				<strong>Files with worst coverage:</strong>
 				<ol>
-					<cfoutput query="stats.qryFilesWorstCoverage">
+					<cfloop query="stats.qryFilesWorstCoverage">
 						<li>#filePath# - #round( percCoverage*100 )#%</li>
-					</cfoutput>
+					</cfloop>
 				</ol>
 			</li>		
 		</ul>

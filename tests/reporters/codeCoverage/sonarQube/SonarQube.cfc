@@ -54,7 +54,8 @@ component accessors=true {
 			rootNode.XMLChildren.append( fileNode );
 		}
 			
-		coverageXML.XMLChildren.append( rootNode );
+    	coverageXML.xmlRoot = rootNode;
+		//coverageXML.XMLChildren.append( rootNode );
 		
 		if( getFormatXML() ) {
 			// Clean up formatting on XML doc and convert to string

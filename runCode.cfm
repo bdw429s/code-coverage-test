@@ -53,7 +53,7 @@ here
 <!--- cfscript block --->
 <cfscript>
 	myFlag = true;
-	anotherFlag = structLiteral = {
+	structLiteral = {
 		foo : 'bar',
 		baz : 'bum',
 		whoo : 'hoo'
@@ -65,11 +65,10 @@ here
 	}
 	writeOutput( message );
 	myQry = queryNew( 'col1' );
-	query name="myQry2" dbtype="query" { echo( '
+	myQry2 = queryExecute( '
 		SELECT *
 		FROM myQry
-		WHERE 1 = 1
-	' ) }
+		WHERE 1 = 1', {}, { dbtype='query' } );
 	writedump( myQry );
 </cfscript>
 

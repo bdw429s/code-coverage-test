@@ -31,7 +31,7 @@ component accessors=true {
 		
 		// Remove the lineData column so it doesn't confuse the QofQ engine.
 		var qryData = queryExecute( '
-			SELECT filePath, numLines, numCoveredLines, numExecutableLines, percCoverage
+			SELECT filePath, filePathHash, numLines, numCoveredLines, numExecutableLines, percCoverage
 			FROM qryCoverageData
 			', {}, { dbtype='query' } );
 		
@@ -60,13 +60,13 @@ component accessors=true {
 		
 		stats.qryFilesBestCoverage = qryBest;
 
-		var listBestFilePaths = "'" & ValueList(qryBest.filePath, "','") & "'";
+		var listBestFilePathHashes = "'" & ValueList(qryBest.filePathHash, "','") & "'";
 		
 		// Get files with worst coverage (exclude files already listed under "best" coverage)
 		var qryWorst = queryExecute( '
 			SELECT *
 			FROM qryData
-			WHERE filePath NOT IN ( #listBestFilePaths# )
+			WHERE filePathHash NOT IN ( #PreserveSingleQuotes( listBestFilePathHashes )# )
 				AND percCoverage < 1
 			ORDER BY percCoverage ASC, filePath
 			', {}, { dbtype='query', maxRows=10 } );		

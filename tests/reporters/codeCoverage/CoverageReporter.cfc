@@ -79,8 +79,10 @@ component {
 	*/
 	private function setDefaultOptions( struct opts={} ) {  	
 	  	opts.passThroughReporter = opts.passThroughReporter ?: {};
-	  	opts.passThroughReporter.type = opts.passThroughReporter.type ?: 'simple';
-	  	opts.passThroughReporter.options = opts.passThroughReporter.options ?: {};
+	  	opts.passThroughReporter.type = opts.passThroughReporter.type ?: 'simple';	  	
+	  	opts.passThroughReporter.options = opts.passThroughReporter.options ?: structNew();
+	  	
+	  	
 	  	// Not defaulting opts.passThroughReporter.resultsUDF
 	  	
 	  	opts.sonarQube = opts.sonarQube ?: {};

@@ -11,7 +11,14 @@ component accessors=true {
 	function init() {
 		// Classes needed to work.
 		variables.pathPatternMatcher = new PathPatternMatcher();
-		variables.templateCompiler = new TemplateCompiler();
+		
+		// Detect server
+		if( listFindNoCase( "Railo,Lucee", server.coldfusion.productname ) ) {
+			variables.templateCompiler = new TemplateCompiler_Lucee();
+		} else {
+			variables.templateCompiler = new TemplateCompiler_Adobe();
+		}
+		
 		try {
 			variables.fragentClass = createObject( 'java', 'com.intergral.fusionreactor.agent.Agent' );
 		} catch( Any e ) {
@@ -71,7 +78,7 @@ component accessors=true {
 		var fileList = directoryList( arguments.pathToCapture, true, "path", "*.cf*");
 		
 		// start data structure
-		var qryData = queryNew( "filePath,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData" );
+		var qryData = queryNew( "filePath,filePathHash,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData" );
 
 		for( var theFile in fileList ) {
 			
@@ -95,22 +102,20 @@ component accessors=true {
 				numLines = arrayLen( fileLines ),
 				numCoveredLines = 0,
 				numExecutableLines = 0,
-				percCoverage = 0
+				percCoverage = 0,
+				filePathHash = hash( theFile )
 			};
 			// Add this to query later
 			var lineData = createObject( 'java', 'java.util.LinkedHashMap' ).init();
 			
-			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
-						
+			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: structNew();
+			
 			// If we don't have any metrics for this file, and we're on Railo or Lucee, attempt to force the file to load.
-			if( 
-					!structCount( lineMetricMap ) 
-					&& ( structKeyExists( server, 'lucee' ) || structKeyExists( server, 'railo' ) ) 
-				) {
+			if( !structCount( lineMetricMap ) ) {
 				// Force the engine to compile and load the file even though it was never run. 
 				templateCompiler.compileAndLoad( theFile );
 				// Check for metrics again 
-				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: {};
+				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: structNew();
 			}
 			
 			var currentLineNum=0;
@@ -120,7 +125,7 @@ component accessors=true {
 				currentLineNum++;
 				if( structCount( lineMetricMap ) && lineMetricMap.containsKey( javaCast( 'int', currentLineNum ) ) ) {
 					var lineMetric = lineMetricMap.get(  javaCast( 'int', currentLineNum ) );
-					var covered = lineMetric.getCount()
+					var covered = lineMetric.getCount();
 					
 					// Overrides for bugginess ************************************************************************
 					
