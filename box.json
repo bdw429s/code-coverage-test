@@ -8,5 +8,8 @@
         "cfperformanceexplorer":"cfperformanceexplorer",
         "wirebox":"wirebox",
         "testbox":"testbox"
+    },
+    "testbox":{
+        "runner":"http://127.0.0.1:8582/tests/runner.cfm"
     }
 }
