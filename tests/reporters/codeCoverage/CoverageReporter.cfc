@@ -55,23 +55,27 @@ component {
 		required testbox.system.TestBox testbox,
 		struct options
 	){
-	  	// *************** Default options ***************
+	  	// Default options
 	  	var opts = setDefaultOptions( arguments.options ?: {} );
 	  	
-	  	// *************** Prepare coverage data ***************
+	  	// Prepare coverage data
 	  	var qryCoverageData = generateCoverageData( opts );
 	  				
-	  	// *************** SonarQube Integration ***************
+	  	// SonarQube Integration
 	  	var sonarQubeResults = processSonarQube( qryCoverageData, opts );
 	  		  	
-	  	// ***************  Generate Stats ***************
-	  	var statsResults = processStats( qryCoverageData );
+	  	// Generate Stats
+	  	var stats = processStats( qryCoverageData );
+	  	var statsHTML = renderStats( stats );
+	  		  	
+	  	// Generate code browser
+	  	processCodeBrowser( qryCoverageData, stats, opts );
 	  	
-	  	// *************** Execute pass-through reporter ***************
+	  	// Execute pass-through reporter
 	  	var nestedReporterResult =  processPassThroughReporter( opts, results, testbox );
 		
-	  	// *************** Prepare the wrapper report ***************
-		return processWrapperReport( sonarQubeResults, statsResults, nestedReporterResult, testbox, results );
+	  	// Prepare the wrapper report
+		return renderWrapperReport( sonarQubeResults, statsHTML, nestedReporterResult, testbox, results, opts );
 	}
 
 	/**
@@ -87,6 +91,9 @@ component {
 	  	
 	  	opts.sonarQube = opts.sonarQube ?: {};
 		opts.sonarQube.XMLOutputPath = opts.sonarQube.XMLOutputPath ?: '';
+		
+		opts.browser = opts.browser ?: {};
+		opts.browser.outputDir = opts.browser.outputDir ?: '';
 				
 	  	opts.pathToCapture = opts.pathToCapture ?: '';
 		opts.whitelist = opts.whitelist ?: '';
@@ -138,12 +145,33 @@ component {
 	*/
 	private function processStats( required query qryCoverageData ) {
 	  	var coverageStats = new stats.CoverageStats();
-	  	var stats = coverageStats.generateStats( qryCoverageData );
-		savecontent variable="local.statsResults" {
+	  	return coverageStats.generateStats( qryCoverageData );
+	}
+	
+
+	/**
+	* Render HTML representation of statistics
+	*/
+	private function renderStats( required struct stats ) {
+		savecontent variable="local.statsHTML" {
 			include "stats/CoverageStats.cfm";
 		}
-		return local.statsResults;
+		return local.statsHTML;
 	}
+	
+
+	/**
+	* Generate code browser
+	*/
+	private function processCodeBrowser( qryCoverageData, stats, opts ) {
+		
+		// Only generate browser if there's a generation path specified
+		if( len( opts.browser.outputDir ) ) {
+		  	var codeBrowser = new browser.CodeBrowser();
+		  	codeBrowser.generateBrowser( qryCoverageData, stats, opts.browser.outputDir );
+		}
+	}
+
 	
 	/**
 	* Run the passthrough reporter 
@@ -181,7 +209,7 @@ component {
 	/**
 	* Generate our final HTML to display
 	*/
-	private function processWrapperReport( sonarQubeResults, statsResults, nestedReporterResult, testbox, results ) {
+	private function renderWrapperReport( sonarQubeResults, statsHTML, nestedReporterResult, testbox, results, opts ) {
 		getPageContext().getResponse().setContentType( "text/html" );
 		savecontent variable="local.report" {
 			include "CoverageReportWrapper.cfm";
@@ -189,7 +217,6 @@ component {
 		return local.report;
 	}
 
-	
 
 	/**
 	* This is a mixin that will expose the buildReporter() method in the TestBox component

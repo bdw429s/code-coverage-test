@@ -221,3 +221,4 @@ pip-log.txt
 /testbox
 *.xml
 /server.json
+/tests/CoverageBrowser
