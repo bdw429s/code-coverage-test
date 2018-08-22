@@ -31,15 +31,17 @@ component accessors=true {
 		if( directoryExists( browserOutputDir ) ) {
 			try {
 				directoryDelete( browserOutputDir, true );
-				// Create it fresh
-				directoryCreate( browserOutputDir);
 			} catch ( Any e ) {
 				// Windows can get cranky if explorer or something has a lock on a folder while you try to delete
 				rethrow;
 			}
 		}
 		
-				
+		// Create it fresh
+		if( !directoryExists( browserOutputDir ) ) {
+			directoryCreate( browserOutputDir );	
+		}
+		
 		// Create index
 		savecontent variable="local.index" {
 			include "templates/index.cfm";
