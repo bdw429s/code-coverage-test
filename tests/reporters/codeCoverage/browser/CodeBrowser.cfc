@@ -31,13 +31,14 @@ component accessors=true {
 		if( directoryExists( browserOutputDir ) ) {
 			try {
 				directoryDelete( browserOutputDir, true );
+				// Create it fresh
+				directoryCreate( browserOutputDir);
 			} catch ( Any e ) {
 				// Windows can get cranky if explorer or something has a lock on a folder while you try to delete
 				rethrow;
 			}
 		}
-		// Create it fresh
-		directoryCreate( browserOutputDir, true, true );
+		
 				
 		// Create index
 		savecontent variable="local.index" {
@@ -49,7 +50,9 @@ component accessors=true {
 		for( var fileData in qryCoverageData ) {
 			// Coverage files are named after "real" files
 			var theFile = "#browserOutputDir & fileData.relativeFilePath#.html";
-			directoryCreate( getDirectoryFromPath( theFile ), true, true );
+			if (!directoryExists(getDirectoryFromPath( theFile ))){
+				directoryCreate( getDirectoryFromPath( theFile ));
+			}
 			
 			var fileContents = fileRead( fileData.filePath );
 			// Replace Windows CRLF with CR
@@ -72,7 +75,7 @@ component accessors=true {
 	* visually reward or shame the user
 	* TODO: add more variations of color
 	*/
-	function percentToColor( required number percentage ) {
+	function percentToColor( required percentage ) {
 		percentage = round( percentage*100 );
 		if( percentage >=85 ) {
 			return 'green';

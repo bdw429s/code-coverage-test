@@ -84,9 +84,13 @@ component accessors=true {
 		var fileList = directoryList( arguments.pathToCapture, true, "path", "*.cf*");
 		
 		// start data structure
-		var qryData = queryNew( "filePath,relativeFilePath,filePathHash,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData" );
+		var qryData = queryNew( "filePath,relativeFilePath,filePathHash,numLines,numCoveredLines,numExecutableLines,percCoverage,lineData",
+			"varchar,varchar,varchar,integer,integer,integer,decimal,object" );
 
 		for( var theFile in fileList ) {
+			theFile=theFile.replace("\","/","all");
+			pathToCapture=pathToCapture.replace("\","/","all");
+
 			var relativeFilePath = replaceNoCase( theFile, arguments.pathToCapture, '' );
 			
 			// Skip this file if it doesn't match our patterns
