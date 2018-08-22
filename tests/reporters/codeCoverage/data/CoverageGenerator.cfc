@@ -121,13 +121,21 @@ component accessors=true {
 			var lineData = createObject( 'java', 'java.util.LinkedHashMap' ).init();
 			
 			var lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: structNew();
-			
+			var noDataForFile = false;
 			// If we don't have any metrics for this file, and we're on Railo or Lucee, attempt to force the file to load.
 			if( !structCount( lineMetricMap ) ) {
 				// Force the engine to compile and load the file even though it was never run. 
 				templateCompiler.compileAndLoad( theFile );
 				// Check for metrics again 
-				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile ) ?: structNew();
+				lineMetricMap = fragentClass.getAgentInstrumentation().get("cflpi").getLineMetrics( theFile );
+				
+				if( isNull( lineMetricMap ) ) {
+					lineMetricMap = structNew(); 
+					var noDataForFile = true;
+				}
+				
+			
+				
 			}
 			
 			var currentLineNum=0;
@@ -170,6 +178,9 @@ component accessors=true {
 						strFiledata.numCoveredLines++;
 					}
 					var previousLineRan=covered;
+				} else if( noDataForFile ) {
+					// As a hack, if there is no data for this file, just count every line against us.
+					strFiledata.numExecutableLines++;
 				}
 				
 			}
