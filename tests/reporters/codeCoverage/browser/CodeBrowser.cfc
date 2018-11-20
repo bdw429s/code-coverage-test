@@ -8,6 +8,10 @@
 component accessors=true {
 	
 	function init() {
+
+		// Classes needed to work.
+		variables.coldFish = new ColdFish();
+		variables.javaProxy = createObject( "java", "lucee.runtime.java.JavaProxy" ).init()
 		
 		variables.CR = chr( 13 );
 		variables.LF = chr( 10 );
@@ -56,17 +60,10 @@ component accessors=true {
 				directoryCreate( getDirectoryFromPath( theFile ));
 			}
 			
-			var fileContents = fileRead( fileData.filePath );
-			// Replace Windows CRLF with CR
-			fileContents = replaceNoCase( fileContents, CRLF, CR, 'all' );
-			// Replace lone LF with CR
-			fileContents = replaceNoCase( fileContents, LF, CR, 'all' );
-			// Break on CR, keeping empty lines 
-			var fileLines = fileContents.listToArray( CR, true );
-			
 			savecontent variable="local.fileTemplate" {
 				include "templates/file.cfm";
 			}
+			
 			fileWrite( theFile, local.fileTemplate );
 			
 		}
