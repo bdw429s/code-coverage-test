@@ -219,6 +219,7 @@ pip-log.txt
 /.sonar
 /wirebox
 /testbox
-*.xml
 /server.json
 /tests/CoverageBrowser
+settings.xml
+tests/sonarqube-codeCoverage.xml
